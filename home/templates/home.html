@@ -5,7 +5,7 @@
 <div class="banner" style="display: flex;align-items: center;justify-content: center;color: #fff;">
       <div class="container" style="padding-bottom: 5rem;">
         <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 65px;line-height: 1.5;">We grow your business with<br><span class="text-color"> Website & Application</span></h1>
-        <h1 class="font-weight-semibold show-only-mobile mt-0 pt-0" style="font-size: 40px;line-height: 1.3;">We grow your business with<br><span class="text-color"> Website & Application</span></h1>
+        <h1 class="font-weight-semibold show-only-mobile mt-0 pt-5" style="font-size: 30px;line-height: 1.3;">We grow your business with<br><span class="text-color"> Website & Application</span></h1>
         <h6 class="font-weight-normal pb-3 mt-4" style="color: #e7e7e7;">Over 25+ sites built and over a half million in revenue generated. You're next!l</h6>
         <div class="show-only-pc" style="padding-bottom: 8rem">
           <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar" class="btn btn-info mr-1">Book a Strategy Call</a>
@@ -13,8 +13,9 @@
         </div>
 
          <div class="show-only-mobile">
-          <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar"  class="btn btn-info mr-1">Book a Strategy Call</a>
-          <a href="{% url 'home:works' %}" class="btn btn-outline-success ml-1" style="background-color:transparent;">See Our Work</a>
+          <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar"  class="btn btn-info mr-1 mb-2">Book a Strategy Call</a>
+
+          <a href="{% url 'home:works' %}" class="btn btn-outline-success ml-1 mb-2" style="background-color:transparent;">See Our Work</a>
         </div>
 
 
@@ -64,7 +65,7 @@
 
           <div class="logos">
             {% for object in technology %}
-                <img src="{{object.logo}}" style="padding-right:2.5em;padding-left:2.5rem;"/>
+                <img src="{{object.logo}}" style="padding:0 2.5rem;" height="50"/>
             {% endfor %}
         </div>
       </div>
@@ -219,10 +220,10 @@
 
 
     <br class="show-only-mobile">
-    <div class="container rounded show-only-mobile" style="margin: 1rem;background-color:#fff;" >
+    <div class="container rounded show-only-mobile" style="background-color:#fff;" >
       <div class="slider-mobile">
 
-          <div class="logo.urls">
+          <div class="logo.urls mt-4 mb-4">
             {% for object in brands %}
                 <img src="{{object.logo.url}}" style="padding:0.2rem 2.5em 0.2rem 2.5rem;" height="90"/>
             {% endfor %}
