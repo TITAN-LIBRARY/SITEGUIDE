@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <div class="banner-smaller pb-5" style="color: #fff;">
+    <div class="container pb-5">
+      <section class="" id="features-section" >
+        <div class="content-header pb-5">
+            <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 50px;line-height: 1.5;">Contact<span class="text-color"> Us</span></h1>
+            <h1 class="font-weight-semibold show-only-mobile mt-0 pt-0" style="font-size: 30px;line-height: 1.5;">Contact<span class="text-color"> Us</span></h1>
+          <h6 class="section-subtitle">How can we help you?</h6>
+        </div>
+
+    {% if messages %}
+        {% for message in messages %}
+          <div class="" style="margin-top: -3rem; margin-bottom: 1rem;"> <span class="text-color">Message submitted, </span> {{ message }} </div>
+        {% endfor %}
+    {% endif %}
+    <form class="pb-5" method="post">
+        {% csrf_token %}
+        <div class="row pb-3">
+            <div class="col-md-4 ml-auto pb-3">
+                <input class="form-control  py-4" id="id_name" name="name" placeholder="Name" type="text" required>
+            </div>
+
+            <div class="col-md-4 mr-auto">
+                <input class="form-control  py-4" id="id_phone" name="phone" placeholder="Phone" type="tel" required>
+            </div>
+        </div>
+        <div class="row pb-3">
+            <div class="col-md-4 ml-auto pb-3">
+                <input class="form-control  py-4" id="id_email" name="email" placeholder="Email id" type="email" required>
+            </div>
+            <div class="col-md-4 mr-auto">
+                <input class="form-control  py-4" id="id_website" name="website" placeholder="Website URL (Optional)" type="url">
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-md-8 ml-auto mr-auto">
+                <textarea class="form-control  py-4" id="id_description" name="description" placeholder="Tell us about your project.." rows="4" cols="50" style="border:solid 1px #183d9b;" required></textarea>
+            </div>
+        </div>
+        <div class="row pb-3">
+            <div class="col-md-8 ml-auto mr-auto">
+                <button type= "submit" class="btn btn-info" style="color: #fff;background: #1998ff;box-shadow: 0 0 5px #1998ff, 0 0 15px #1998ff, 0 0 20px #1998ff; border-color: #1998ff;cursor: pointer;">Send Message</button>
+            </div>
+        </div>
+    </form>
+      </section>
+    </div>
+  </div>
+<br>
+<div class="show-only-mobile" style="padding-bottom: 18rem;">
+
+</div>
+{% endblock content %}

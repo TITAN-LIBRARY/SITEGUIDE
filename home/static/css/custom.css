@@ -1,0 +1,124 @@
+.text-color-blue {
+    background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
+      -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-color {
+background-image: linear-gradient(to bottom, #deff00, #eee700, #f8d000, #feb800, #ffa10f);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.banner {
+  background-color: #000000;
+  background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
+  text-align: center;
+  color: #fff;
+}
+
+
+.banner-smaller {
+  background-color: #000000;
+  background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
+  text-align: center;
+  color: #fff;
+}
+
+.banner-extra-small {
+  background-color: #000000;
+  background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
+  text-align: center;
+  color: #fff;
+}
+
+
+.banner-yellow {
+  background-color: #000000;
+background-image: linear-gradient(to bottom, #deff00, #eee700, #f8d000, #feb800, #ffa10f);
+  text-align: center;
+}
+
+
+.banner-smaller-yellow {
+  background-color: #000000;
+background-image: linear-gradient(to bottom, #deff00, #eee700, #f8d000, #feb800, #ffa10f);
+  text-align: center;
+}
+
+@media only screen and (max-width: 1025px) {
+        .banner{
+            height: 80%;
+        }
+        .banner-smaller{
+            height: 65%;
+        }
+        .banner-extra-small{
+            height: 65%;
+        }
+        .heading-title{
+            font-size: 2.3rem
+        }
+        .show-only-mobile {
+             display: block;
+        }
+        .show-only-pc {
+             display: none;
+        }
+}
+
+@media only screen and (min-width: 1025px) {
+        .banner{
+            height: 85%;
+        }
+         .banner-smaller{
+            height: 75%;
+        }
+        .banner-extra-small{
+            height: 65%;
+        }
+        .heading-title{
+            font-size: 2.5rem
+        }
+        .show-only-pc {
+             display: block;
+        }
+         .show-only-mobile {
+             display: none;
+        }
+}
+
+
+
+.container {
+	 overflow: hidden;
+}
+ .container .slider {
+	 animation: slidein 30s linear infinite;
+	 white-space: nowrap;
+}
+ .container .slider .logos {
+	 width: 100%;
+	 display: inline-block;
+	 margin: 0px 0;
+}
+ .container .slider .logos .fab {
+	 width: calc(100% / 5);
+	 animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+ @keyframes slidein {
+	 from {
+		 transform: translate3d(0, 0, 0);
+	}
+	 to {
+		 transform: translate3d(-100%, 0, 0);
+	}
+}
+ @keyframes fade-in {
+	 0% {
+		 opacity: 0;
+	}
+	 100% {
+		 opacity: 1;
+	}
+}

@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="banner" style="display: flex;align-items: center;justify-content: center;color: #fff;">
+      <div class="container" style="padding-bottom: 5rem;">
+        <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 65px;line-height: 1.5;">We grow your business with<br><span class="text-color"> Website & Application</span></h1>
+        <h1 class="font-weight-semibold show-only-mobile mt-0 pt-0" style="font-size: 40px;line-height: 1.3;">We grow your business with<br><span class="text-color"> Website & Application</span></h1>
+        <h6 class="font-weight-normal pb-3 mt-4" style="color: #e7e7e7;">Over 25+ sites built and over a half million in revenue generated. You're next!l</h6>
+        <div class="show-only-pc" style="padding-bottom: 8rem">
+          <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar" class="btn btn-info mr-1">Book a Strategy Call</a>
+          <a href="{% url 'home:works' %}" class="btn btn-outline-success ml-1" style="background-color:transparent;">See Our Work</a>
+        </div>
+
+         <div class="show-only-mobile">
+          <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar"  class="btn btn-info mr-1">Book a Strategy Call</a>
+          <a href="{% url 'home:works' %}" class="btn btn-outline-success ml-1" style="background-color:transparent;">See Our Work</a>
+        </div>
+
+
+
+<!--<section class="slide-option">-->
+<!--	<div id="infinite" class="highway-slider">-->
+<!--		<div class="container highway-barrier">-->
+<!--			<ul class="highway-lane">-->
+<!--				 {% for object in technology %}-->
+<!--                <li class="highway-car" style="flex:0;"><span>-->
+<!--                <img src="{{object.logo}}" style="margin-right:5rem;"/>-->
+<!--             </span></li>-->
+<!--                    {% endfor %}-->
+
+<!--			</ul>-->
+<!--		</div>-->
+<!--	</div>-->
+<!--</section>-->
+
+
+<div class="container">
+  <div class="row align-items-center" style="box-sizing: border-box;">
+
+<!-- <h6 class="text-center">Technologies we love</h6>-->
+
+
+    <div class="container rounded show-only-pc" style="margin: -1rem;background-color:#fff;border-box:false;  ">
+      <div class="slider">
+        <div class="logos" style="padding-right:5rem;">
+            {% for object in technology %}
+                <img src="{{object.logo}}" style="padding-right:5rem;"/>
+            {% endfor %}
+        </div>
+
+          <div class="logos">
+            {% for object in technology %}
+                <img src="{{object.logo}}" style="padding-right:2.5em;padding-left:2.5rem;"/>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+    <br class="show-only-mobile">
+    <div class="container rounded show-only-mobile" style="margin: 1rem;background-color:#fff;">
+      <div class="slider-mobile">
+
+          <div class="logos">
+            {% for object in technology %}
+                <img src="{{object.logo}}" style="padding-right:2.5em;padding-left:2.5rem;"/>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+      </div>
+</div>
+
+  <div class="content-wrapper mt-0">
+    <div class="container">
+      <section class="features-overview pt-4" id="features-section" >
+        <div class="content-header pt-3">
+          <h2 class="heading-title pb-2">Our <span class="text-color-blue">Recent Work</span></h2>
+          <h6 class="section-subtitle text-muted">We development is streamlined, fast & user-friendly that meets customer's needs.</h6>
+        </div>
+
+
+
+        <section class="case-studies">
+        <div class="row grid-margin">
+        <!--TODO ADD LINK ON WHOLE DIV-->
+          <!--        TODO ON hove blue text fix -->
+
+          {% for object in project %}
+            <div class="col-12 col-md-6 col-lg-6 stretch-card mb-3 mt-4 mb-lg-0" data-aos="zoom-in">
+              <div class="card color-cards shadow p-0">
+                <div class="card-body p-0">
+                  <div class="bg-primary text-center card-contents p-0">
+                    <div class="card-image p-0">
+                      <img src="{{object.image.url}}" class="case-studies-card-img" style="height: 300px;width: 100%" alt="" >
+                    </div>
+                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                        <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
+                    </div>
+                  </div>
+                  <div class="card-details text-center pt-4">
+                      <h6 class="m-0 pb-1">{{object.project_name}}</h6>
+                      <p>{{object.case_study}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+          <center class="mb-5">
+<!--            Yellow Button -->
+            <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
+          </center>
+        </section>
+      </section>
+
+
+
+
+<!--        <div class="d-md-flex justify-content-between">-->
+<!--          <div class="grid-margin d-flex justify-content-start">-->
+<!--            <div class="features-width">-->
+<!--              <img src="{% static 'images/Group12.svg'%}" alt="" class="img-icons">-->
+<!--              <h5 class="py-3">Speed<br>Optimisation</h5>-->
+<!--              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>-->
+<!--              <a href="#"><p class="readmore-link">Readmore</p></a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="grid-margin d-flex justify-content-center">-->
+<!--            <div class="features-width">-->
+<!--              <img src="{% static 'images/Group7.svg'%}" alt="" class="img-icons">-->
+<!--              <h5 class="py-3">SEO and<br>Backlinks</h5>-->
+<!--              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>-->
+<!--              <a href="#"><p class="readmore-link">Readmore</p></a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="grid-margin d-flex justify-content-end">-->
+<!--            <div class="features-width">-->
+<!--              <img src="{% static 'images/Group5.svg'%}" alt="" class="img-icons">-->
+<!--              <h5 class="py-3">Content<br>Marketing</h5>-->
+<!--              <p class="text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>-->
+<!--              <a href="#"><p class="readmore-link">Readmore</p></a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+
+
+
+      <section class="customer-feedback" id="feedback-section">
+        <div class="row">
+          <div class="col-12 text-center pb-5 pt-4">
+          <h2 class="heading-title pb-2">Clients <span class="text-color-blue">Testimonial's</span></h2>
+          <h6 class="section-subtitle text-muted">We’re a growth focused team with result driven approach.</h6>
+        </div>
+
+          <div class="owl-carousel owl-theme grid-margin">
+<!--TODO give link to whole carousel-->
+            {% for object in review %}
+              <div class="card customer-cards" style="height: 390px">
+                <div class="card-body">
+                  <div class="text-center">
+                    <img src="{{object.project.logo.url}}" height="89" alt="">
+                    <p class="m-0 py-3 text-muted">{{object.review}}</p>
+                    <div class="content-divider m-auto" style="background-color:#000"></div>
+                    <h6 class="card-title pt-3">{{object.name}}</h6>
+                    <h6 class="customer-designation text-muted m-0">{{object.position}} {{object.project.project_name}}</h6>
+<!--                    <a href="{{object.project.website}}">View {{object.project.project_name}}</a>-->
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+                        </div>
+        </div>
+
+ <center class="mb-5" style="margin-top:-3em;">
+<!--            Yellow Button -->
+            <a href="{% url 'home:testimonials' %}" class="btn btn-outline-info">View more</a>
+          </center>
+      </section>
+    </div>
+
+
+    <div class="banner-smaller" style="display: flex;align-items: center;justify-content: center;color: #fff;">
+      <div class="container pt-5" >
+        <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 40px;line-height: 1.5;">Let's Talk about your <span class="text-color"> Project</span></h1>
+        <h1 class="font-weight-semibold show-only-mobile mt-0 pt-0" style="font-size: 30px;line-height: 1.3;">Let's Talk about your <span class="text-color"> Project</span></h1>
+        <div class="pt-2">
+          <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar" class="btn btn-info">Book a FREE Strategy Call</a>
+        </div>
+
+
+          <div class="container mt-5" >
+  <div class="row align-items-center" style="box-sizing: border-box;">
+
+<!-- <h6 class="text-center">Technologies we love</h6>-->
+
+
+    <div class="container rounded show-only-pc p-2" style="margin: -1rem;background-color:#fff;border-box:false;  ">
+      <div class="slider">
+        <div class="logos p-2" style="padding-right:5rem;">
+            {% for object in brands %}
+                <img src="{{object.logo.url}}" style="padding: 0.2rem 5rem 0.2rem 0;" height="50"/>
+            {% endfor %}
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <br class="show-only-mobile">
+    <div class="container rounded show-only-mobile" style="margin: 1rem;background-color:#fff;" >
+      <div class="slider-mobile">
+
+          <div class="logo.urls">
+            {% for object in brands %}
+                <img src="{{object.logo.url}}" style="padding:0.2rem 2.5em 0.2rem 2.5rem;" height="90"/>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+<!--      TODO add client logo carousel-->
+  </div>
+{% endblock content %}

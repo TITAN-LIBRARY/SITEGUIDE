@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="banner-extra-small pb-5" style="height:50%;display: flex;align-items: center;justify-content: center;color: #fff;">
+      <div class="container" >
+      <h1 class="font-weight-semibold mt-0 pt-0 show-only-pc" style="font-size: 50px;line-height: 1.5;">A Growth focused agency with<br><span class="text-color"> result driven approach.</span></h1>
+      <h1 class="font-weight-semibold mt-0 pt-0 show-only-mobile" style="font-size: 30px;line-height: 1.3;">A Growth focused agency with<br><span class="text-color"> result driven approach.</span></h1>
+      <h6 class="font-weight-normal pb-3 mt-4" style="color: #e7e7e7;">We’re a team of design and development experts who help you transform and scale your business.</h6>
+      <div>
+        <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar" class="btn btn-info mr-1">Book a FREE Strategy Call</a>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+  <div class="content-wrapper">
+    <div class="container">
+
+      <section class="features-overview pt-4" id="features-section-1" >
+        <div class="content-header pt-3">
+          <h2 class="heading-title pb-2">Our <span class="text-color-blue">Recent Work</span></h2>
+          <h6 class="section-subtitle text-muted">We development is streamlined, fast & user-friendly that meets customer's needs.</h6>
+        </div>
+
+
+
+        <section class="case-studies">
+        <div class="row grid-margin">
+        <!--TODO ADD LINK ON WHOLE DIV-->
+          <!--        TODO ON hove blue text fix -->
+
+          {% for object in project %}
+            <div class="col-12 col-md-6 col-lg-6 stretch-card mb-3 mt-4 mb-lg-0" data-aos="zoom-in">
+              <div class="card color-cards shadow p-0">
+                <div class="card-body p-0">
+                  <div class="bg-primary text-center card-contents p-0">
+                    <div class="card-image p-0">
+                      <img src="{{object.image.url}}" class="case-studies-card-img" style="height: 300px;width: 100%" alt="" >
+                    </div>
+                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                        <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
+                    </div>
+                  </div>
+                  <div class="card-details text-center pt-4">
+                      <h6 class="m-0 pb-1">{{object.project_name}}</h6>
+                      <p>{{object.case_study}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+          <center class="mb-5">
+<!--            Yellow Button -->
+            <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
+          </center>
+        </section>
+      </section>
+
+
+
+
+      <section class="features-overview" id="features-section" >
+        <div class="content-header">
+          <h2 class="heading-title">What our <span class="text-color-blue"> magical </span> formula?</h2>
+          <h6 class="section-subtitle text-muted">We craft custom website and applications to transform your business</h6>
+        </div>
+        <div class="row justify-content-between">
+          <div class="col-lg-4 grid-margin justify-content-start">
+            <div class="features-width">
+              <img src="{% static 'images/work/icons8-developer-mode.gif' %}" alt="" class="img-icons" height="70rem;">
+              <h5 class="py-3 ">Coded Solutions</h5>
+              <p class="text-muted">We can help you plan, build and manage a powerful coded system that will save you time and money on updates.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 grid-margin justify-content-center">
+          <div class="features-width">
+              <img src="{% static 'images/work/icons8-wrench.gif' %}" alt="" class="img-icons" height="70rem">
+              <h5 class="py-3">Integrations</h5>
+              <p class="text-muted">We can help you integrate all of your favorite tools including Mailchimp, Hubspot, Zapier and more!</p>
+            </div>
+          </div>
+          <div class="col-lg-4 grid-margin justify-content-end">
+            <div class="features-width">
+              <img src="{% static 'images/work/icons8-loading-infinity.gif' %}" alt="" class="img-icons" height="70rem">
+              <h5 class="py-3">Limitless Capabilities</h5>
+              <p class="text-muted">With Coded website and application, anything is possible. Our team has no limitations when it comes to webdesign and development.</p>
+            </div>
+          </div>
+            <div class="col-lg-4 grid-margin justify-content-start">
+            <div class="features-width">
+              <img src="{% static 'images/work/icons8-rocket.gif' %}" alt="" class="img-icons" height="70rem">
+              <h5 class="py-3">Speed & Optimisation</h5>
+              <p class="text-muted">With coded website and application, loading speed are blazing fast .</p>
+            </div>
+          </div>
+          <div class="col-lg-4 grid-margin justify-content-center">
+            <div class="features-width">
+              <img src="{% static 'images/work/icons8-combo-chart.gif' %}" alt="" class="img-icons" height="70rem">
+              <h5 class="py-3">SEO</h5>
+              <p class="text-muted">We help you with SEO so when customer look for you they find you.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 grid-margin justify-content-end">
+            <div class="features-width">
+              <img src="{% static 'images/work/icons8-prize.gif' %}" alt="" class="img-icons" height="70rem">
+              <h5 class="py-3">Experience</h5>
+              <p class="text-muted">We make sure our website and application are smooth essay to use and responsive.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="content-wrapper mb-5">
+        <div class="container">
+          <div class="content-header text-center">
+            <h2 class="heading-title">Our <span class="text-color-blue"> Believe</span></h2>
+            <h4 class="section-subtitle text-muted">"If Your business is not on the Internet,<br> <span> then your business will be out of business." </span></h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+        <div class="banner-smaller" style="display: flex;align-items: center;justify-content: center;color: #fff;">
+      <div class="container pt-5" >
+        <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 40px;line-height: 1.5;">Let's Talk about your <span class="text-color"> Project</span></h1>
+        <h1 class="font-weight-semibold show-only-mobile mt-0 pt-0" style="font-size: 30px;line-height: 1.3;">Let's Talk about your <span class="text-color"> Project</span></h1>
+        <div class="pt-2">
+        <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar" class="btn btn-info mr-1">Book a FREE Strategy Call</a>
+        </div>
+
+         <div class="container mt-5" >
+  <div class="row align-items-center" style="box-sizing: border-box;">
+
+<!-- <h6 class="text-center">Technologies we love</h6>-->
+
+
+    <div class="container rounded show-only-pc p-2" style="margin: -1rem;background-color:#fff;border-box:false;  ">
+      <div class="slider">
+        <div class="logos p-2" style="padding-right:5rem;">
+            {% for object in brands %}
+                <img src="{{object.logo.url}}" style="padding: 0.2rem 5rem 0.2rem 0;" height="50"/>
+            {% endfor %}
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <br class="show-only-mobile">
+    <div class="container rounded show-only-mobile" style="margin: 1rem;background-color:#fff;" >
+      <div class="slider-mobile">
+
+          <div class="logo.urls">
+            {% for object in brands %}
+                <img src="{{object.logo.url}}" style="padding:0.2rem 2.5em 0.2rem 2.5rem;" height="90"/>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+      </div>
+    </div>
+    <br>
+    </div>
+  </div>
+
+<!--      <section class="digital-marketing-service" id="digital-marketing-section">-->
+<!--        <div class="row align-items-center">-->
+<!--          <div class="col-12 col-lg-7 grid-margin grid-margin-lg-0" data-aos="fade-right">-->
+<!--            <h3 class="m-0">We Offer a Full Range<br>of Digital Marketing Services!</h3>-->
+<!--            <div class="col-lg-7 col-xl-6 p-0">-->
+<!--              <p class="py-4 m-0 text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer turpis, suspendisse.</p>-->
+<!--              <p class="font-weight-medium text-muted">Lorem ipsum dolor sit amet, tincidunt vestibulum. Fusce egeabus consectetuer</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-12 col-lg-5 p-0 img-digital grid-margin grid-margin-lg-0" data-aos="fade-left">-->
+<!--            <img src="images/Group1.png" alt="" class="img-fluid">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="row align-items-center">-->
+<!--          <div class="col-12 col-lg-7 text-center flex-item grid-margin" data-aos="fade-right">-->
+<!--            <img src="images/Group2.png" alt="" class="img-fluid">-->
+<!--          </div>-->
+<!--          <div class="col-12 col-lg-5 flex-item grid-margin" data-aos="fade-left">-->
+<!--            <h3 class="m-0">Leading Digital Agency<br>for  Business Solution.</h3>-->
+<!--            <div class="col-lg-9 col-xl-8 p-0">-->
+<!--              <p class="py-4 m-0 text-muted">Power-packed with impressive features and well-optimized, this template is designed to provide the best performance in all circumstances.</p>-->
+<!--              <p class="pb-2 font-weight-medium text-muted">Its smart features make it a powerful stand-alone website building tool.</p>-->
+<!--            </div>-->
+<!--            <button class="btn btn-info">Readmore</button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </section>-->
+
+
+{% endblock content %}
