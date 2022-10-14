@@ -1,0 +1,32 @@
+<div class="content-wrapper p-0">
+    <div class="container">
+        <section class="customer-feedback" id="feedback-section">
+            <div class="row">
+                <div class="col-12 text-center pb-5 pt-4">
+                    <h2 class="heading-title pb-2">Clients <span class="text-color-blue">Testimonial's</span></h2>
+                    <h6 class="section-subtitle text-muted">We’re a growth focused team with result driven approach.</h6>
+                </div>
+                <div class="owl-carousel owl-theme grid-margin">
+                    <!--TODO give link to whole carousel-->
+                    {% for object in review %}
+                    <div class="card customer-cards" style="height: 390px">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <img src="{{object.project.logo.url}}" height="89" alt="">
+                                <p class="m-0 py-3 text-muted">{{object.review}}</p>
+                                <div class="content-divider m-auto" style="background-color:#000"></div>
+                                <h6 class="card-title pt-3">{{object.name}}</h6>
+                                <h6 class="customer-designation text-muted m-0">{{object.position}} {{object.project.project_name}}</h6>
+                                <!--                    <a href="{{object.project.website}}">View {{object.project.project_name}}</a>-->
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <center class="mb-5" style="margin-top:-3em;">
+                <a href="{% url 'home:testimonials' %}" class="btn btn-outline-info">View more</a>
+            </center>
+        </section>
+    </div>
+</div>

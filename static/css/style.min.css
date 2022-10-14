@@ -8691,8 +8691,9 @@ body.sidebar-open:before {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .banner {
-  background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
-  background-color: #f7f8fa;
+  background-image: #fff;
+  background-color: #fff;
+  color:#000;
   text-align: center;
 }
 .content-wrapper {
@@ -8893,8 +8894,9 @@ footer a:hover {
   }
 }
 .navbar {
-  background-image: linear-gradient(to top, #0350c6, #0350c6, #0350c6, #0350c6, #0350c6);
-  background-color: #f7f8fa;
+  background-image: #fff;
+  background-color: #fff;
+  color: #000;
   padding: 49px 0 63px;
 }
 .navbar .navbar-toggler {

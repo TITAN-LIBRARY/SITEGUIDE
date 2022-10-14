@@ -1,434 +1,547 @@
 {% load static %}
-
-
 <html lang="en">
-<head>
+    <head>
+        <title>SiteGuide</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{% static 'images/logo/logo-color.png' %}">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.theme.default.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/aos/css/aos.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/slick.css' %}">
 
-  <title>SiteGuide</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="{% static 'images/logo/logo-color.png' %}">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.carousel.min.css' %}">
-  <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.theme.default.css' %}">
-  <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
-  <link rel="stylesheet" href="{% static 'vendors/aos/css/aos.css' %}">
-  <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
-  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <style>
-.text-color-blue {
-    background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
-      -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        <style>
+            body {
+                font-family: Roboto, sans-serif;
+            }
 
-.text-color {
-background-image: linear-gradient(to bottom, #deff00, #eee700, #f8d000, #feb800, #ffa10f);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
+            .text-color-blue {
+                background-image: #1A27C9;
+                color: #1A27C9;
+                -webkit-background-clip: text;
+            }
 
-.banner {
-  background-color: #000000;
-  background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
-  text-align: center;
-  color: #fff;
-}
+            img.image-greyscale {
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            }
 
+            btn.small-btn {
+                padding: 0.5rem 1rem;
+                border-radius:5px;
+                font-size:1.2rem
+            }
 
-.banner-smaller {
-  background-color: #000000;
-  background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
-  text-align: center;
-  color: #fff;
-}
+            <!--slider css-->
+            #gallery {
+                 margin: 1rem;
+            }
+             #gallery img {
+                 margin: 0.2rem;
+                 float: left;
+                 filter: grayscale(100%);
+                 -webkit-filter: grayscale(100%);
+                 -moz-filter: grayscale(100%);
+            }
+             #gallery img:hover {
+                 filter: grayscale(0%);
+                 -webkit-filter: grayscale(0%);
+                 -moz-filter: grayscale(0%);
+                 transform: scale(1.1);
+                 -webkit-transform: scale(1.1);
+                 -moz-transform: scale(1.1);
+            }
 
-.banner-extra-small {
-  background-color: #000000;
-  background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
-  text-align: center;
-  color: #fff;
-}
+             #gallery .slick-prev:before, #gallery .slick-next:before {
+                 color: blue;
+            }
+            <!--slider css end-->
 
-
-.banner-yellow {
-  background-color: #000000;
-background-image: linear-gradient(to bottom, #deff00, #eee700, #f8d000, #feb800, #ffa10f);
-  text-align: center;
-}
-
-
-.banner-smaller-yellow {
-  background-color: #000000;
-background-image: linear-gradient(to bottom, #deff00, #eee700, #f8d000, #feb800, #ffa10f);
-  text-align: center;
-}
-
-@media only screen and (max-width: 1025px) {
-        .banner{
+<!--                  Not using -->
+            .banner {
+            background-color: #fff;
+            background-image: #fff;
+            text-align: center;
+            color: #000;
+            }
+            .banner-smaller {
+            background-color: #fff;
+            background-image: #fff;
+            text-align: center;
+            color: #000;
+            }
+            .banner-extra-small {
+            background-color: #fff;
+            background-image: #fff;
+            text-align: center;
+            color: #000;
+            }
+            @media only screen and (max-width: 1025px) {
+            .banner{
             height: 80%;
-        }
-        .banner-smaller{
+            }
+            .banner-smaller{
             height: 65%;
-        }
-        .banner-extra-small{
+            }
+            .banner-extra-small{
             height: 65%;
-        }
-        .heading-title{
+            }
+            .heading-title{
             font-size: 2.3rem
-        }
-        .show-only-mobile {
-             display: block;
-        }
-        .show-only-pc {
-             display: none;
-        }
-}
-
-@media only screen and (min-width: 1025px) {
-        .banner{
+            }
+            .show-only-mobile {
+            display: block;
+            }
+            .show-only-pc {
+            display: none;
+            }
+            }
+            @media only screen and (min-width: 1025px) {
+            .banner{
             height: 85%;
-        }
-         .banner-smaller{
+            }
+            .banner-smaller{
             height: 75%;
-        }
-        .banner-extra-small{
+            }
+            .banner-extra-small{
             height: 65%;
-        }
-        .heading-title{
+            }
+            .heading-title{
             font-size: 2.5rem
+            }
+            .show-only-pc {
+            display: block;
+            }
+            .show-only-mobile {
+            display: none;
+            }
+            }
+            .container {
+            overflow: hidden;
+            }
+            .container .slider {
+            animation: slidein 30s linear infinite;
+            white-space: nowrap;
+            }
+            .container .slider .logos {
+            width: 100%;
+            display: inline-block;
+            margin: 0px 0;
+            }
+            @keyframes slidein {
+            from {
+            transform: translate3d(0, 0, 0, 0 );
+            }
+            to {
+            transform: translate3d(-100%, 0, 0);
+            }
+            }
+            @keyframes fade-in {
+            0% {
+            opacity: 0;
+            }
+            100% {
+            opacity: 1;
+            }
+            }
+            .container .slider-mobile {
+            animation: slidein-mobile 20s linear infinite;
+            white-space: nowrap;
+            }
+            .container .slider-mobile .logos {
+            width: 100%;
+            display: inline-block;
+            margin: 0px 0;
+            }
+            @keyframes slidein-mobile {
+            from {
+            transform: translate3d(0, 0, 0, 0 );
+            }
+            to {
+            transform: translate3d(-420%, 0, 0);
+            }
+            }
+            section.slide-option {
+            margin: 0 0 50px 0;
+            }
+            section.slide-option .no-marg {
+            margin: 0 0 0 0;
+            }
+            div.highway-slider {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 150px;
+            }
+            div.highway-slider div.highway-barrier {
+            overflow: hidden;
+            position: relative;
+            }
+            div.highway-slider ul.highway-lane {
+            display: flex;
+            height: 100%;
+            }
+            div.highway-slider ul.highway-lane li.highway-car {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            color: #343434;
+            }
+            @keyframes translatestf {
+            0% {
+            transform: translateX(100%);
+            }
+            100% {
+            transform: translateX(-500%);
+            }
+            }
+            #stffull div.highway-barrier ul.highway-lane {
+            width: 500%;
+            }
+            #stffull div.highway-barrier ul.highway-lane li.highway-car {
+            animation: translatestf 30s linear infinite;
+            }
+            #stffull div.highway-barrier ul.highway-lane li.highway-car h4 {
+            font-size: 28px;
+            }
+            @keyframes translateinfinite {
+            100% {
+            transform: translateX(calc(-2160px));
+            }
+            }
+            #infinite div.highway-barrier {
+            background: #fff;
+            box-shadow: 0 3px 10px -3px rgba(0,0,0,0.3);
+            }
+            #infinite div.highway-barrier::before, #infinite div.highway-barrier::after {
+            content: &#34;
+            &#34;
+            ;
+            position: absolute;
+            z-index: 9;
+            width: 180px;
+            height: 100%;
+            }
+            #infinite div.highway-barrier::before {
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right,#ffffff 0%,rgba(255,255,255,0) 100%);
+            }
+            #infinite div.highway-barrier::after {
+            top: 0;
+            right: 0;
+            background: linear-gradient(to left,#ffffff 0%,rgba(255,255,255,0) 100%);
+            }
+            #infinite div.highway-barrier ul.highway-lane {
+            width: calc(4320px);
+            }
+            #infinite div.highway-barrier ul.highway-lane li.highway-car {
+            width: 180px;
+            animation: translateinfinite 25s linear infinite;
+            }
+            #infinite div.highway-barrier ul.highway-lane li.highway-car span.fab {
+            font-size: 65px;
+            }
+
+            .btn-outline-info{
+                color:#1A27C9;
+                border-color: #1A27C9;
+            }
+
+            .btn-outline-info:hover{
+                background-color:#1A27C9;
+                border-color: #1A27C9;
+                color: #fff;
+            }
+
+            .btn-info{
+                background-color:#1A27C9;
+                border-color: #1A27C9;
+                color: #fff;
+            }
+
+            .btn-info:hover{
+                color:#fff;
+                border-color: #2633E3;
+                background-color:#2633E3 ;
+            }
+
+             .btn-outline-secondary:hover{
+                color:#1A27C9;
+                border-color: #1A27C9;
+                background-color:#fff ;
+            }
+
+            .dropdown:hover .dropdown-menu{
+            display: block;
+            z-index:10000000;
+
+            }
+            .dropdown-menu{
+            z-index:1000000000;
+            }
+            .dropdown-item{
+            z-index:1000000000;
+            }
+            .color-hover:hover{
+            color:#1A27C9;
+            }
+
+            @media (min-width: 992px) {
+  .rounded-lg-3 { border-radius: .3rem; }
+}
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
-        .show-only-pc {
-             display: block;
-        }
-         .show-only-mobile {
-             display: none;
-        }
-}
-.container {
-	 overflow: hidden;
-}
- .container .slider {
-	 animation: slidein 30s linear infinite;
-	 white-space: nowrap;
-}
- .container .slider .logos {
-	 width: 100%;
-	 display: inline-block;
-	 margin: 0px 0;
-}
+      }
 
- @keyframes slidein {
-	 from {
-		 transform: translate3d(0, 0, 0, 0 );
-	}
-	 to {
-		 transform: translate3d(-100%, 0, 0);
-	}
-}
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
 
- @keyframes fade-in {
-	 0% {
-		 opacity: 0;
-	}
-	 100% {
-		 opacity: 1;
-	}
-}
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
 
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
 
- .container .slider-mobile {
-	 animation: slidein-mobile 20s linear infinite;
-	 white-space: nowrap;
-}
- .container .slider-mobile .logos {
-	 width: 100%;
-	 display: inline-block;
-	 margin: 0px 0;
-}
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
 
- @keyframes slidein-mobile {
-	 from {
-		 transform: translate3d(0, 0, 0, 0 );
-	}
-	 to {
-		 transform: translate3d(-420%, 0, 0);
-	}
-}
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
 
+        </style>
+    </head>
+    <body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+        <header id="header-section">
+            <nav class="show-only-pc navbar navbar-expand-lg p-3 " id="navbar-pc" >
+                <div class="container" style="box-sizing:content-box;overflow:visible">
+                    <div class="navbar-brand-wrapper d-flex w-100" style="margin-left:5em;z-index:1000;">
+                        <a href="/"><img src="{{logo}}" style="height: 60px;" alt=""></a>
+                        <h6 style="padding:0.75rem 0rem 0 0.5rem;font-size:1.0rem;font-size:1.75rem;" class="text-color-blue">SiteGuide</h6>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-menu-wrapper header-font" id="navbarSupportedContent-pc">
+                        <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+                            <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+                                <div class="navbar-collapse-logo">
+                                    <a href="/"><img src="{% static 'images/logo/logo-black.png'%}" height="40px" alt=""></a>
+                                </div>
+                                <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:home' %}" role="button"><span class="color-hover {% if request.path == '/' %}text-color-blue{% endif %}">Home</span></a>
 
-
-
- section.slide-option {
-	 margin: 0 0 50px 0;
-}
- section.slide-option .no-marg {
-	 margin: 0 0 0 0;
-}
- div.highway-slider {
-	 display: flex;
-	 justify-content: center;
-	 width: 100%;
-	 height: 150px;
-}
- div.highway-slider div.highway-barrier {
-	 overflow: hidden;
-	 position: relative;
-}
- div.highway-slider ul.highway-lane {
-	 display: flex;
-	 height: 100%;
-}
- div.highway-slider ul.highway-lane li.highway-car {
-	 flex: 1;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 background: #fff;
-	 color: #343434;
-}
- @keyframes translatestf {
-	 0% {
-		 transform: translateX(100%);
-	}
-	 100% {
-		 transform: translateX(-500%);
-	}
-}
- #stffull div.highway-barrier ul.highway-lane {
-	 width: 500%;
-}
- #stffull div.highway-barrier ul.highway-lane li.highway-car {
-	 animation: translatestf 30s linear infinite;
-}
- #stffull div.highway-barrier ul.highway-lane li.highway-car h4 {
-	 font-size: 28px;
-}
- @keyframes translateinfinite {
-	 100% {
-		 transform: translateX(calc(-2160px));
-	}
-}
- #infinite div.highway-barrier {
-	 background: #fff;
-	 box-shadow: 0 3px 10px -3px rgba(0,0,0,0.3);
-}
- #infinite div.highway-barrier::before, #infinite div.highway-barrier::after {
-	 content: &#34;
-	 &#34;
-	;
-	 position: absolute;
-	 z-index: 9;
-	 width: 180px;
-	 height: 100%;
-}
- #infinite div.highway-barrier::before {
-	 top: 0;
-	 left: 0;
-	 background: linear-gradient(to right,#ffffff 0%,rgba(255,255,255,0) 100%);
-}
- #infinite div.highway-barrier::after {
-	 top: 0;
-	 right: 0;
-	 background: linear-gradient(to left,#ffffff 0%,rgba(255,255,255,0) 100%);
-}
- #infinite div.highway-barrier ul.highway-lane {
-	 width: calc(4320px);
-}
- #infinite div.highway-barrier ul.highway-lane li.highway-car {
-	 width: 180px;
-	 animation: translateinfinite 25s linear infinite;
-}
- #infinite div.highway-barrier ul.highway-lane li.highway-car span.fab {
-	 font-size: 65px;
-}
-  </style>
-  
-</head>
-<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
-  <header id="header-section">
-
-    <nav class="show-only-pc navbar navbar-expand-lg pl-3 pl-sm-0" id="navbar-pc">
-    <div class="container">
-<!--      TODO add tag underneath logo               <h2>Grow Big, Grow Online</h2> -->
-      <div class="navbar-brand-wrapper d-flex w-100">
-        <a href="/"><img src="{% static 'images/logo/logo.png'%}" style="height: 80px;" alt=""></a>
-      </div>
-      <div class="collapse navbar-collapse navbar-menu-wrapper" id="navbarSupportedContent-pc">
-        <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
-          <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
-            <div class="navbar-collapse-logo">
-              <a href="/"><img src="{% static 'images/logo/logo-color.png'%}" height="40px" alt=""></a>
-            </div>
-            <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
-            </button>
-          </li>
-          <li class="nav-item smallFont">
-            <a class="nav-link" style="font-size:1.2rem;" href="{% url 'home:home' %}">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size:1.2rem;" href="{% url 'home:services' %}">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size:1.2rem;" href="{% url 'home:works' %}">Works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size:1.2rem;" href="{% url 'home:testimonials' %}">Testimonials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size:1.2rem;" href="{% url 'home:contact' %}">Contact</a>
-          </li>
-<!--          TODO add help text on click -->
-          <li class="nav-item btn-contact-us pl-4 pl-lg-0">
-            <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar" target="_blank" class="btn btn-info" style="color: #000;font-weight: bold;background: #f4d417;box-shadow: 0 0 0px #f4d417, 0 0 1px #f4d417, 0 0 20px #f4d417; border-color: #f4d417;cursor: pointer;">
-              Book a Strategy Call
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-  </nav>
-
-    <nav class="show-only-mobile navbar navbar-expand-lg p-2 pl-sm-0" id="navbar-mobile">
-    <div class="container">
-<!--      TODO add tag underneath logo               <h2>Grow Big, Grow Online</h2> -->
-      <div class="navbar-brand-wrapper d-flex w-100">
-        <a href="/"><img src="{% static 'images/logo/logo.png'%}" style="height: 80px;" alt=""></a>
-
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="mdi mdi-menu navbar-toggler-icon" style="color:#fff;"></span>
-        </button>
-
-
-      </div>
-      <div class="collapse navbar-collapse navbar-menu-wrapper p-0" id="navbarSupportedContent">
-        <ul class="navbar-nav align-items-lg-center align-items-start">
-          <li class="d-flex align-items-center justify-content-between pl-3" >
-            <div class="navbar-collapse-logo p-2 pl-sm-0">
-              <a href="/"><img src="{% static 'images/logo/logo-color.png'%}" height="40px" alt=""></a>
-            </div>
-            <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="mdi mdi-close navbar-toggler-icon" style="padding-left:5em;"></span>
-            </button>
-          </li>
-          <li class="nav-item smallFont">
-            <a class="nav-link" style="font-size:1.2rem;color:black;" href="{% url 'home:home' %}">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size:1.2rem;color:black;" href="{% url 'home:services' %}">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size:1.2rem;color:black;" href="{% url 'home:works' %}">Works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size:1.2rem;color:black;" href="{% url 'home:testimonials' %}">Testimonials</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size:1.2rem;color:black;" href="{% url 'home:contact' %}">Contact</a>
-          </li>
-<!--          TODO add help text on click -->
-          <li class="nav-item btn-contact-us pl-4 pl-lg-0 pt-3">
-            <a href="https://calendly.com/diwakarmandal/success-call-with-diwakar" target="_blank" class="btn btn-info" style="color: #192C73;font-weight: bold;background: #f4d417;box-shadow: 0 0 5px #f4d417, 0 0 15px #f4d417, 0 0 20px #f4d417; border-color: #f4d417;cursor: pointer;">
-              Book a Strategy Call
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    </nav>
-
-  </header>
-
-
-
-  {% block content %}
-  {% endblock content %}
-
-   <section class="contact-details container" id="contact-details-section">
-        <div class="row text-center text-md-left">
-          <div class="col-12 col-md-6 col-lg-3 grid-margin">
-            <img src="{% static 'images/logo/logo-color.png'%}" height="50px;" alt="" class="pb-2">
-            <div class="pt-2">
-              <a class="text-muted m-0" href="mailto:business@siteguide.co.in">business@siteguide.co.in</a>
-              <!--<p class="text-muted m-0">906-179-8309</p>-->
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 grid-margin">
-            <h5 class="pb-2">Get in Touch</h5>
-            <p class="text-muted">Don’t miss any updates of our new templates and extensions.!</p>
-            <form>
-              <input type="text" class="form-control" id="Email" placeholder="Email id">
-            </form>
-            <div class="pt-3">
-              <button class="btn btn-dark">Subscribe</button>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 grid-margin">
-            <h5 class="pb-2">Our Guidelines</h5>
-            <a href="{% url 'home:privacy' %}"><p class="m-0 pb-2">Terms</p></a>
-            <a href="{% url 'home:terms' %}" ><p class="m-0 pt-1 pb-2">Privacy policy</p></a>
-          </div>
-          <div class="col-12 col-md-6 col-lg-3 grid-margin">
-              <!--<h5 class="pb-2">Our address</h5>-->
-              <!--<p class="text-muted">India<br></p>-->
-              <div class="d-flex justify-content-center justify-content-md-start">
-<!--                <a href="#"><span class="mdi mdi-facebook"></span></a>-->
-<!--                <a href="#"><span class="mdi mdi-twitter"></span></a>-->
-                <a href="https://www.instagram.com/siteguide.co.in/"><span class="mdi mdi-instagram"></span></a>
-                <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span class="mdi mdi-linkedin"></span></a>
-              </div>
-          </div>
-        </div>
-      </section>
-
-     </div>
-  </div>
-
-      <footer class="border-top">
-        <p class="text-center text-muted pt-4">Copyright © 2022<a href="/" class="px-1 text-color-blue">SiteGuide.</a>All rights reserved.</p>
-
-<!--        <p class="text-center text-muted pt-2">Distributed By: <a href="https://www.themewagon.com/" class="px-1" target="_blank">Themewagon</a></p>-->
-      </footer>
-      <!-- Modal for Contact - us Button -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title" id="exampleModalLabel">Contact Us</h4>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-group">
-                  <label for="Name">Name</label>
-                  <input type="text" class="form-control" id="Name" placeholder="Name">
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" role="button" href="{% url 'home:services' %}"><span class="color-hover dropdown-toggle {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
+                                <ul class="dropdown-menu" style="">
+                                    <li><a class="dropdown-item" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Websites</span></a></li>
+                                    <li><a class="dropdown-item" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Applications</span></a></li>
+                                    <!--                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                                    <!--                <li><hr class="dropdown-divider"></li>-->
+                                    <!--                <li><a class="dropdown-item" href="#">Separated link</a></li>-->
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:works' %}"><span class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:testimonials' %}"><span class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:contact' %}"><span class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></a>
+                            </li>
+                            <!--          TODO add help text on click -->
+                            <li class="nav-item btn-contact-us pl-4 pl-lg-0" style="margin:0 5rem 0 1rem;">
+                                <a href="{{calendly_link}}" class="btn btn-info small-btn">
+                                    Book a Strategy Call
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="Email">Email</label>
-                  <input type="email" class="form-control" id="Email-1" placeholder="Email">
+            </nav>
+            <nav class="show-only-mobile navbar navbar-expand-lg p-3" id="navbar-mobile">
+                <div class="container">
+                    <div class="navbar-brand-wrapper d-flex w-100">
+                        <a href="/"><img src="{{logo}}" style="height: 50px;" alt=""></a>
+                        <h6 style="padding:0.45rem 0rem 0 0.5rem;font-size:0.9rem;">SiteGuide</h6>
+                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="mdi mdi-menu navbar-toggler-icon" style="color:#000;"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-menu-wrapper p-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav align-items-lg-center align-items-start">
+                            <li class="d-flex align-items-center justify-content-between pl-3" >
+                                <div class="navbar-collapse-logo ">
+                                    <a href="/"><img src="{% static 'images/logo/logo-black.png'%}" height="50px" alt=""></a>
+                                </div>
+                                <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="mdi mdi-close navbar-toggler-icon" style="padding-left:5em;"></span>
+                                </button>
+                            </li>
+                            <li class="nav-item smallFont">
+                                <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:home' %}"><span class="color-hover {% if '/' == request.path %}text-color-blue{% endif %}">Home</span></a>
+                            </li>
+                            <!--          <li class="nav-item">-->
+                            <!--            <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in request.path %}text-color-blue{% endif %}">Services</span></a>-->
+                            <!--          </li>-->
+                             <li class="nav-item dropdown">
+                                <a class="nav-link" style="font-size:1.1rem; color:#000;" role="button"><span class="color-hover dropdown-toggle {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
+                                <ul class="dropdown-menu" style="">
+                                    <li><a class="dropdown-item" style="font-size:1.1rem; color:#000;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a></li>
+                                    <li><a class="dropdown-item" style="font-size:1.1rem; color:#000;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a></li>
+                                    <!--                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                                    <!--                <li><hr class="dropdown-divider"></li>-->
+                                    <!--                <li><a class="dropdown-item" href="#">Separated link</a></li>-->
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:works' %}"><span class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:testimonials' %}"><span class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="font-size:1.2rem;color:black;" href="{% url 'home:contact' %}"><span class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></a>
+                            </li>
+                            <!--          TODO add help text on click -->
+                            <li class="nav-item btn-contact-us pl-4 pl-lg-0 pt-3">
+                                <a href="{{calendly_link}}" target="_blank" class="btn btn-outline-info">
+                                Book a Strategy Call
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="Message">Message</label>
-                  <textarea class="form-control" id="Message" placeholder="Enter your Message"></textarea>
+            </nav>
+        </header>
+        {% block content %}
+        {% endblock content %}
+        <section class="contact-details container pt-1" id="contact-details-section">
+            <div class="row text-center text-md-left">
+                <div class="col-12 col-md-6 col-lg-3 grid-margin">
+                    <img src="{{logo}}" height="50px;" alt="" class="pb-2">
+                    <div class="pt-2">
+                        <a class="text-muted m-0" href="mailto:{{business_mail}}"><span class="color-hover">{{business_mail}}</span></a>
+                        <!--<p class="text-muted m-0">906-179-8309</p>-->
+                    </div>
                 </div>
-              </form>
+<!--                <div class="col-12 col-md-6 col-lg-3 grid-margin">-->
+<!--                    <h5 class="pb-2">Get in Touch</h5>-->
+<!--                    <p class="text-muted">Don’t miss any updates of our new templates and extensions.!</p>-->
+<!--                    <form>-->
+<!--                        <input type="text" class="form-control" id="Email" placeholder="Email id">-->
+<!--                    </form>-->
+<!--                    <div class="pt-3">-->
+<!--                        <button class="btn btn-dark">Subscribe</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+               <div class="col-12 col-md-6 col-lg-3 grid-margin">
+                    <h5 class="pb-2">Explore</h5>
+                    <a href="{% url 'home:home' %}" style="color:#6e6e6e;">
+                      <p class="m-0 pb-2"> <span class="color-hover {% if '/' == request.path %}text-color-blue{% endif %}">Home</span></p>
+                    </a>
+                    <a href="{% url 'home:works' %}" style="color:#6e6e6e;">
+                        <p class="m-0 pb-2"><span class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></p>
+                    </a>
+                    <a href="{% url 'home:services' %}" style="color:#6e6e6e;">
+                        <p class="m-0 pb-2"><span class="color-hover {% if 'services' in request.path %}text-color-blue{% endif %}">Services</span></p>
+                    </a>
+                    <a href="{% url 'home:testimonials' %}" style="color:#6e6e6e;">
+                        <p class="m-0 pb-2"><span class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></p>
+                    </a>
+                    <a href="{% url 'home:contact' %}" style="color:#6e6e6e;">
+                        <p class="m-0 pb-2"><span class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 grid-margin">
+                    <h5 class="pb-2">Our Guidelines</h5>
+                    <a href="{% url 'home:privacy' %}" style="color:#6e6e6e;">
+                        <p class="m-0 pb-2"><span class="color-hover {% if 'privacy' in request.path %}text-color-blue{% endif %}">Privacy policy</span></p>
+                    </a>
+                    <a href="{% url 'home:terms' %}" style="color:#6e6e6e;">
+                        <p class="m-0 pb-2"><span class="color-hover {% if 'terms' in request.path %}text-color-blue{% endif %}">Terms</span></p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 grid-margin">
+                    <!--<h5 class="pb-2">Our address</h5>-->
+                    <!--<p class="text-muted">India<br></p>-->
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <!--                <a href="#"><span class="mdi mdi-facebook"></span></a>-->
+                        <!--                <a href="#"><span class="mdi mdi-twitter"></span></a>-->
+                        <a href="https://www.instagram.com/siteguide.co.in/" ><span class="mdi mdi-instagram" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
+                        <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span class="mdi mdi-linkedin" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
+                    </div>
+                </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success">Submit</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="{% static 'vendors/jquery/jquery.min.js' %}"></script>
-  <script src="{% static 'vendors/bootstrap/bootstrap.min.js' %}"></script>
-  <script src="{% static 'vendors/owl-carousel/js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'vendors/aos/js/aos.js' %}"></script>
-  <script src="{% static 'js/landingpage.js' %}"></script>
-</body>
+        </section>
+        <footer class="border-top">
+            <p class="text-center text-muted pt-4">Copyright © 2020-{{current_year}}<a href="/" class="px-1 text-color-blue color-hover">SiteGuide.</a>All rights reserved.</p>
+        </footer>
+        <script src="{% static 'vendors/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendors/bootstrap/bootstrap.min.js' %}"></script>
+        <script src="{% static 'vendors/owl-carousel/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'vendors/aos/js/aos.js' %}"></script>
+        <script src="{% static 'js/landingpage.js' %}"></script>
+        <script src="{% static 'js/slick.js' %}"></script>
+
+        <script>
+        $(document).ready(function () {
+             $('#gallery').slick({
+                  slidesToShow: 7,
+                  slidesToScroll: 1,
+                  autoplay: true,
+                  autoplaySpeed: 0,
+                  speed: 8000,
+                  pauseOnHover: false,
+                  cssEase: 'linear',
+                  arrow: true,
+            });
+        });
+        </script>
+    </body>
 </html>

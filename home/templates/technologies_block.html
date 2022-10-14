@@ -1,0 +1,33 @@
+<div class="p-3 pt-2 mb-2" style="align-items: center;justify-content: center;background-color:#f7f7f7">
+    <center>
+        <h3 class="heading-title pb-2">Technologies  <span class="text-color-blue">we love</span></h3>
+        <h6 class="section-subtitle text-muted">We development is streamlined, fast & user-friendly that meets customer's needs.</h6>
+        <br>
+    </center>
+    <div class="row align-items-center" >
+        <!-- <h6 class="text-center">Technologies we love</h6>-->
+        <div class="container rounded show-only-pc" style="background-color:#f7f7f7; ">
+            <div class="slider">
+                <div class="logos" style="padding-right:5rem;">
+                    {% for object in technology %}
+                    <img src="{{object.logo}}" style="padding-right:5rem;" class="image-greyscale"/>
+                    {% endfor %}
+                </div>
+                <div class="logos">
+                    {% for object in technology %}
+                    <img src="{{object.logo}}" style="padding-right:2.5em;padding-left:2.5rem;" class="image-greyscale"/>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="container rounded show-only-mobile" style="margin: 1rem;padding:2rem;background-color:#f7f7f7;">
+            <div class="slider-mobile">
+                <div class="logos">
+                    {% for object in technology %}
+                    <img src="{{object.logo}}" style="padding:0 2.5rem;" height="50"/>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

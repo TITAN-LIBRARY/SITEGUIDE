@@ -9560,10 +9560,10 @@ body.sidebar-open::before {
 }
 
 .banner {
-  background-color: #000000;
-  background-image: linear-gradient(to top, #192c73, #193587, #183d9b, #1247b0, #0350c6);
+  background-color: #fff;
+  background-image: #fff;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 .content-wrapper {
