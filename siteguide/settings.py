@@ -12,9 +12,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'livereload',  # need to before static files
+    # 'livereload',  # need to before static files
     'django.contrib.staticfiles',
-
+    # 'livereload-server',
     'home',
 ]
 
