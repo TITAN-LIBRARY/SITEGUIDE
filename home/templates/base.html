@@ -471,12 +471,20 @@
         {% block content %}
         {% endblock content %}
         <!-- <div class="bg-light py-5"> -->
-            <section class="contact-details container pt-1 bg-light" id="contact-details-section" >
-                <div class="row text-center text-md-left">
-                    <div class="col-12 col-md-6 col-lg-3 grid-margin">
-                        <img src="{{logo}}" height="50px;" alt="" class="pb-2">
+            <section class="contact-details container p-5 bg-light" id="contact-details-section" >
+                <div class="row text-md-left">
+                    <div class="col-lg-6 col-sm-12 grid-margin">
+                        <div>
+                        <img src="../../media_files/media/logo.png" height="50px;" alt="" class="pb-2" >
+                    </div>
+                        <p class="text-left" style="font-size:16px">Join our newsletter to stay up to date on features and releases.</p>
+                        <div class="d-flex flex-row justify-content-start" style="margin-bottom: 10px;">
+                            <input type="text" style="margin-right: 10px; width:70%; border-color: #1A27C9" placeholder="Enter your Email"/>
+                            <button style="border-color: #1A27C9 ; background: white">Subscribe</button>
+                        </div>
+                        <p class="text-left">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
                         <div class="pt-2">
-                            <a class="text-muted m-0" href="mailto:{{business_mail}}"><span class="color-hover">{{business_mail}}</span></a>
+                            <a class="text-muted m-0" href="mailto:{{business_mail}}"><span class="color-hover"></span></a>
                             <!--<p class="text-muted m-0">906-179-8309</p>-->
                         </div>
                     </div>
@@ -490,7 +498,7 @@
     <!--                        <button class="btn btn-dark">Subscribe</button>-->
     <!--                    </div>-->
     <!--                </div>-->
-                <div class="col-12 col-md-6 col-lg-3 grid-margin">
+                <div class="col-lg-2 col-sm-4 grid-margin">
                         <h5 class="pb-2">Explore</h5>
                         <a href="{% url 'home:home' %}" style="color:#6e6e6e;">
                         <p class="m-0 pb-2"> <span class="color-hover {% if '/' == request.path %}text-color-blue{% endif %}">Home</span></p>
@@ -508,7 +516,7 @@
                             <p class="m-0 pb-2"><span class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></p>
                         </a>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 grid-margin">
+                    <div class="col-lg-2 col-sm-4 grid-margin">
                         <h5 class="pb-2">Our Guidelines</h5>
                         <a href="{% url 'home:privacy' %}" style="color:#6e6e6e;">
                             <p class="m-0 pb-2"><span class="color-hover {% if 'privacy' in request.path %}text-color-blue{% endif %}">Privacy policy</span></p>
@@ -517,14 +525,32 @@
                             <p class="m-0 pb-2"><span class="color-hover {% if 'terms' in request.path %}text-color-blue{% endif %}">Terms</span></p>
                         </a>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3 grid-margin">
+                    <div class="col-lg-2 col-sm-4 grid-margin">
                         <!--<h5 class="pb-2">Our address</h5>-->
                         <!--<p class="text-muted">India<br></p>-->
-                        <div class="d-flex justify-content-center justify-content-md-start">
+                        <h5 class="pb-2">Follow Us</h5>
+                        <div>
                             <!--                <a href="#"><span class="mdi mdi-facebook"></span></a>-->
                             <!--                <a href="#"><span class="mdi mdi-twitter"></span></a>-->
-                            <a href="https://www.instagram.com/siteguide.co.in/" ><span class="mdi mdi-instagram" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
-                            <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span class="mdi mdi-linkedin" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
+                            <div class="d-flex flex-row justify-content-start">
+                                <a href="https://www.instagram.com/siteguide.co.in/" ><span class="mdi mdi-instagram" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
+                                <p style="font-size:14px;">Instagram</p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-start">
+                                <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span class="mdi mdi-linkedin" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
+                                <p style="font-size:16px;">LinkedIn</p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-start">
+                                <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span class="mdi mdi-facebook" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
+                                <p style="font-size:15px;">Facebook</p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-start">
+                                <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span class="mdi mdi-twitter" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
+                                <p style="font-size:16px;">Twitter</p>
+                            </div>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>
