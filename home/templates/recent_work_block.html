@@ -2,14 +2,14 @@
     <div class="container">
         <section class="features-overview pt-4" id="features-section" >
             <div class="content-header pt-3">
-                <h2 class="heading-title pb-2">Our <span class="text-color-blue">Recent Work</span></h2>
-                <h6 class="section-subtitle text-muted">We development is streamlined, fast & user-friendly that meets customer's needs.</h6>
+                <h2 class="heading-title pb-2">Our Recent Works</h2>
+                <h6 class="section-subtitle text-muted">We craft custom websites and applications to transform your business</h6>
             </div>
             <section class="case-studies">
-                <div class="row grid-margin">
+                <!-- <div class="row grid-margin"> -->
                     <!--TODO ADD LINK ON WHOLE DIV-->
                     <!--        TODO ON hove blue text fix -->
-                    {% for object in project %}
+                    <!-- {% for object in project %}
                     <div class="col-12 col-md-6 col-lg-6 stretch-card mb-3 mt-4 mb-lg-0" data-aos="zoom-in">
                         <div class="card color-cards shadow p-0">
                             <div class="card-body p-0">
@@ -28,12 +28,49 @@
                             </div>
                         </div>
                     </div>
-                    {% endfor %}
+                    {% endfor %} -->
+                    <div class=" d-flex  justify-content-around align-items-center">
+                        <div class="arrow_prev slide">
+                            <img src="../../media_files/media/Vector (5).png" alt="" style="padding-right: 10px;">
+                        </div>
+                        <div class="container">
+                    
+                            <section class="case-studies slider d-flex">
+                                {% for object in project %}
+                        <div class="col-12 col-md-6 col-lg-6 stretch-card mb-3 mt-4 mb-lg-0" data-aos="zoom-in">
+                            <div class="card color-cards shadow p-0">
+                                <div class="card-body p-0">
+                                    <div class="bg-primary text-center card-contents p-0">
+                                        <div class="card-image p-0">
+                                            <img src="{{object.image.url}}" class="case-studies-card-img" style="height: 250px;width: 100%" alt="" >
+                                        </div>
+                                        <div class="card-desc-box d-flex align-items-center justify-content-around">
+                                            <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
+                                        </div>
+                                    </div>
+                                    <div class="card-details text-center pt-4">
+                                        <h6 class="m-0 pb-1">{{object.project_name}}</h6>
+                                        <p>{{object.case_study}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    
+                            </section>
+                    
+                        </div>
+                        <div class="arrow_next slide">
+                            <img src="../../media_files/media/Vector (4).png" alt="" style="padding-left: 10px;">
+                        </div>
+                    </div>
+                    <center class="mb-5 mt-2" style="float: right">
+                        <!--            Yellow Button -->
+                        <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
+                    </center>
                 </div>
-                <center class="mb-5">
-                    <!--            Yellow Button -->
-                    <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
-                </center>
+                
+                
             </section>
         </section>
     </div>
