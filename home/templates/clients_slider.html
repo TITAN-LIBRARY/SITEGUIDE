@@ -1,4 +1,5 @@
-<div class="content-wrapper pt-5">
+{% load static %}
+<!-- <div class="content-wrapper pt-5">
     <div class="container">
 
         <div id="gallery">
@@ -13,5 +14,53 @@
             {% endfor %}
         </div>
     </div>
-</div>
+</div> -->
+<style>
+    .slick-slide {
+        margin: 1rem;
+        height: 50px;
+    }
 
+    .slick-slide img {
+        margin: 0.2rem;
+        float: left;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+    }
+
+    .slide img:hover {
+        filter: grayscale(0%);
+        -webkit-filter: grayscale(0%);
+        -moz-filter: grayscale(0%);
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+    }
+
+    .customer-logos {
+        margin: auto;
+    }
+</style>
+<div class=" container d-flex  justify-content-around align-items-center">
+    <div class="arrow_prev slide">
+        <img src="../../media_files/media/Vector (5).png" class="carousel-control-prev-icon ms-5 me-4" alt="">
+    </div>
+    <div class="container">
+
+        <section class="customer-logos slider px-4">
+            {% for object in brands %}
+            <div class="slide">
+
+                <img src="{{object.logo.url}}" style="width:50%;" />
+
+            </div>
+            {% endfor %}
+
+        </section>
+
+    </div>
+    <div class="arrow_next slide">
+        <img src="../../media_files/media/Vector (4).png" class="carousel-control-prev-icon ms-4 me-5" alt="">
+    </div>
+</div>

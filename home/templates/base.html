@@ -1,560 +1,696 @@
 {% load static %}
 <html lang="en">
-    <head>
-        <title>SiteGuide</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link rel="icon" type="image/x-icon" href="{% static 'images/logo/logo-color.png' %}"> -->
-        <link rel="icon" type="image/x-icon" href="/static/images/logo/logo-color.png">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.carousel.min.css' %}"> -->
-        <link rel="stylesheet" href="/static/vendors/owl-carousel/css/owl.carousel.min.css">
-        <!-- <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.theme.default.css' %}"> -->
-        <link rel="stylesheet" href="/static/vendors/owl-carousel/css/owl.theme.default.css">
-        <!-- <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}"> -->
-        <link rel="stylesheet" href="/static/vendors/mdi/css/materialdesignicons.min.css">
-        <!-- <link rel="stylesheet" href="{% static 'vendors/aos/css/aos.css' %}"> -->
-        <link rel="stylesheet" href="/static/vendors/aos/css/aos.css">
-        <!-- <link rel="stylesheet" href="{% static 'css/style.min.css' %}"> -->
-        <!-- <link rel="stylesheet" href="{% static 'css/style.min.css' %}"> -->
-        <link rel="stylesheet" href="/static/css/style.min.css">
-        <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
-        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="{% static 'css/slick.css' %}"> -->
-        <link rel="stylesheet" href="/static/css/slick.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<head>
+    <title>SiteGuide</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/images/logo/logo-color.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/owl-carousel/css/owl.theme.default.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/mdi/css/materialdesignicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/aos/css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <!-- <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
 
-        <style>
-            body {
-                font-family: Roboto, sans-serif;
-            }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-            .text-color-blue {
-                background-image: #1A27C9;
-                color: #1A27C9;
-                -webkit-background-clip: text;
-            }
+    <style>
+        body {
+            font-family: Roboto, sans-serif;
+        }
 
-            img.image-greyscale {
-            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        .text-color-blue {
+            background-image: #1A27C9;
+            color: #1A27C9;
+            -webkit-background-clip: text;
+        }
+
+        img.image-greyscale {
+            -webkit-filter: grayscale(100%);
+            /* Safari 6.0 - 9.0 */
             filter: grayscale(100%);
-            }
+        }
 
-            btn.small-btn {
-                padding: 0.5rem 1rem;
-                border-radius:5px;
-                font-size:1.2rem
-            }
+        .btn .small-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 1.2rem
+        }
 
-            <!--slider css-->
-            #gallery {
-                 margin: 1rem;
-            }
-             #gallery img {
-                 margin: 0.2rem;
-                 float: left;
-                 filter: grayscale(100%);
-                 -webkit-filter: grayscale(100%);
-                 -moz-filter: grayscale(100%);
-            }
-             #gallery img:hover {
-                 filter: grayscale(0%);
-                 -webkit-filter: grayscale(0%);
-                 -moz-filter: grayscale(0%);
-                 transform: scale(1.1);
-                 -webkit-transform: scale(1.1);
-                 -moz-transform: scale(1.1);
-            }
+        /*                Not using */
+        .banner {
+            background-color: #fff;
+            background-image: #fff;
+            text-align: center;
+            color: #000;
+        }
 
-             #gallery .slick-prev:before, #gallery .slick-next:before {
-                 color: blue;
-            }
-            <!--slider css end-->
+        .banner-smaller {
+            background-color: #fff;
+            background-image: #fff;
+            text-align: center;
+            color: #000;
+        }
 
-/*                Not using */
+        .banner-extra-small {
+            background-color: #fff;
+            background-image: #fff;
+            text-align: center;
+            color: #000;
+        }
+        .heading-title {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 42px;
+            text-align: center;
+            color: #000;
+
+        }
+        .section-subtitle {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 1025px) {
             .banner {
-            background-color: #fff;
-            background-image: #fff;
-            text-align: center;
-            color: #000;
+                height: 80%;
             }
+
             .banner-smaller {
-            background-color: #fff;
-            background-image: #fff;
-            text-align: center;
-            color: #000;
+                height: 65%;
             }
+
             .banner-extra-small {
-            background-color: #fff;
-            background-image: #fff;
-            text-align: center;
-            color: #000;
+                height: 65%;
             }
-            @media only screen and (max-width: 1025px) {
-            .banner{
-            height: 80%;
+
+            .heading-title {
+                font-size: 2.3rem
             }
-            .banner-smaller{
-            height: 65%;
-            }
-            .banner-extra-small{
-            height: 65%;
-            }
-            .heading-title{
-            font-size: 2.3rem
-            }
+
             .show-only-mobile {
-            display: block;
+                display: block;
             }
+
             .show-only-pc {
-            display: none;
+                display: none;
             }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .banner {
+                height: 85%;
             }
-            @media only screen and (min-width: 1025px) {
-            .banner{
-            height: 85%;
+
+            .banner-smaller {
+                height: 75%;
             }
-            .banner-smaller{
-            height: 75%;
+
+            .banner-extra-small {
+                height: 65%;
             }
-            .banner-extra-small{
-            height: 65%;
+
+            .heading-title {
+                font-size: 2.5rem
             }
-            .heading-title{
-            font-size: 2.5rem
-            }
+
             .show-only-pc {
-            display: block;
+                display: block;
             }
+
             .show-only-mobile {
-            display: none;
+                display: none;
             }
-            }
-            .container {
+        }
+
+        .container {
             overflow: hidden;
-            }
-            .container .slider {
+        }
+
+        .container .slider {
             animation: slidein 30s linear infinite;
             white-space: nowrap;
-            }
-            .container .slider .logos {
+        }
+
+        .container .slider .logos {
             width: 100%;
             display: inline-block;
             margin: 0px 0;
-            }
-            @keyframes slidein {
+        }
+
+        @keyframes slidein {
             from {
-            transform: translate3d(0, 0, 0, 0 );
+                transform: translate3d(0, 0, 0, 0);
             }
+
             to {
-            transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
             }
-            }
-            @keyframes fade-in {
+        }
+
+        @keyframes fade-in {
             0% {
-            opacity: 0;
+                opacity: 0;
             }
+
             100% {
-            opacity: 1;
+                opacity: 1;
             }
-            }
-            .container .slider-mobile {
+        }
+
+        .container .slider-mobile {
             animation: slidein-mobile 20s linear infinite;
             white-space: nowrap;
-            }
-            .container .slider-mobile .logos {
+        }
+
+        .container .slider-mobile .logos {
             width: 100%;
             display: inline-block;
             margin: 0px 0;
-            }
-            @keyframes slidein-mobile {
+        }
+
+        @keyframes slidein-mobile {
             from {
-            transform: translate3d(0, 0, 0, 0 );
+                transform: translate3d(0, 0, 0, 0);
             }
+
             to {
-            transform: translate3d(-420%, 0, 0);
+                transform: translate3d(-420%, 0, 0);
             }
-            }
-            section.slide-option {
+        }
+
+        section.slide-option {
             margin: 0 0 50px 0;
-            }
-            section.slide-option .no-marg {
+        }
+
+        section.slide-option .no-marg {
             margin: 0 0 0 0;
-            }
-            div.highway-slider {
+        }
+
+        div.highway-slider {
             display: flex;
             justify-content: center;
             width: 100%;
             height: 150px;
-            }
-            div.highway-slider div.highway-barrier {
+        }
+
+        div.highway-slider div.highway-barrier {
             overflow: hidden;
             position: relative;
-            }
-            div.highway-slider ul.highway-lane {
+        }
+
+        div.highway-slider ul.highway-lane {
             display: flex;
             height: 100%;
-            }
-            div.highway-slider ul.highway-lane li.highway-car {
+        }
+
+        div.highway-slider ul.highway-lane li.highway-car {
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             background: #fff;
             color: #343434;
-            }
-            @keyframes translatestf {
+        }
+
+        @keyframes translatestf {
             0% {
-            transform: translateX(100%);
+                transform: translateX(100%);
             }
+
             100% {
-            transform: translateX(-500%);
+                transform: translateX(-500%);
             }
-            }
-            #stffull div.highway-barrier ul.highway-lane {
+        }
+
+        #stffull div.highway-barrier ul.highway-lane {
             width: 500%;
-            }
-            #stffull div.highway-barrier ul.highway-lane li.highway-car {
+        }
+
+        #stffull div.highway-barrier ul.highway-lane li.highway-car {
             animation: translatestf 30s linear infinite;
-            }
-            #stffull div.highway-barrier ul.highway-lane li.highway-car h4 {
+        }
+
+        #stffull div.highway-barrier ul.highway-lane li.highway-car h4 {
             font-size: 28px;
-            }
-            @keyframes translateinfinite {
+        }
+
+        @keyframes translateinfinite {
             100% {
-            transform: translateX(calc(-2160px));
+                transform: translateX(calc(-2160px));
             }
-            }
-            #infinite div.highway-barrier {
+        }
+
+        #infinite div.highway-barrier {
             background: #fff;
-            box-shadow: 0 3px 10px -3px rgba(0,0,0,0.3);
-            }
-            #infinite div.highway-barrier::before, #infinite div.highway-barrier::after {
-            content: &#34;
-            &#34;
-            ;
+            box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        #infinite div.highway-barrier::before,
+        #infinite div.highway-barrier::after {
+            content: 34;
             position: absolute;
             z-index: 9;
             width: 180px;
             height: 100%;
-            }
-            #infinite div.highway-barrier::before {
+        }
+
+        #infinite div.highway-barrier::before {
             top: 0;
             left: 0;
-            background: linear-gradient(to right,#ffffff 0%,rgba(255,255,255,0) 100%);
-            }
-            #infinite div.highway-barrier::after {
+            background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        #infinite div.highway-barrier::after {
             top: 0;
             right: 0;
-            background: linear-gradient(to left,#ffffff 0%,rgba(255,255,255,0) 100%);
-            }
-            #infinite div.highway-barrier ul.highway-lane {
+            background: linear-gradient(to left, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+        }
+
+        #infinite div.highway-barrier ul.highway-lane {
             width: calc(4320px);
-            }
-            #infinite div.highway-barrier ul.highway-lane li.highway-car {
+        }
+
+        #infinite div.highway-barrier ul.highway-lane li.highway-car {
             width: 180px;
             animation: translateinfinite 25s linear infinite;
-            }
-            #infinite div.highway-barrier ul.highway-lane li.highway-car span.fab {
-            font-size: 65px;
-            }
-
-            .btn-outline-info{
-                color:#1A27C9;
-                border-color: #1A27C9;
-            }
-
-            .btn-outline-info:hover{
-                background-color:#1A27C9;
-                border-color: #1A27C9;
-                color: #fff;
-            }
-
-            .btn-info{
-                background-color:#1A27C9;
-                border-color: #1A27C9;
-                color: #fff;
-            }
-
-            .btn-info:hover{
-                color:#fff;
-                border-color: #2633E3;
-                background-color:#2633E3 ;
-            }
-
-             .btn-outline-secondary:hover{
-                color:#1A27C9;
-                border-color: #1A27C9;
-                background-color:#fff ;
-            }
-
-            .dropdown:hover .dropdown-menu{
-            display: block;
-            z-index:10000000;
-
-            }
-            .dropdown-menu{
-            z-index:1000000000;
-            }
-            .dropdown-item{
-            z-index:1000000000;
-            }
-            .color-hover:hover{
-            color:#1A27C9;
-            }
-
-            @media (min-width: 992px) {
-  .rounded-lg-3 { border-radius: .3rem; }
-}
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
         }
-      }
 
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+        #infinite div.highway-barrier ul.highway-lane li.highway-car span.fab {
+            font-size: 65px;
+        }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
+        .btn-outline-info {
+            color: #1A27C9;
+            border-color: #1A27C9;
+        }
 
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
+        .btn-outline-info:hover {
+            background-color: #1A27C9;
+            border-color: #1A27C9;
+            color: #fff;
+        }
 
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
+        .btn-info {
+            background-color: #1A27C9;
+            border-color: #1A27C9;
+            color: #fff;
+        }
 
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
+        .btn-info:hover {
+            color: #fff;
+            border-color: #2633E3;
+            background-color: #2633E3;
+        }
 
-        </style>
-    </head>
-    <body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
-        <header id="header-section">
-            <nav class="show-only-pc navbar navbar-expand-lg p-3 " id="navbar-pc" >
-                <div class="container" style="box-sizing:content-box;overflow:visible">
-                    <div class="navbar-brand-wrapper d-flex w-100" style="margin-left:5em;z-index:1000;">
-                        <a href="/"><img src="{{logo}}" style="height: 60px;" alt=""></a>
-                        <h6 style="padding:0.75rem 0rem 0 0.5rem;font-size:1.0rem;font-size:1.75rem;" class="text-color-blue">SiteGuide</h6>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-menu-wrapper header-font" id="navbarSupportedContent-pc">
-                        <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
-                            <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
-                                <div class="navbar-collapse-logo">
-                                    <a href="/"><img src="{% static 'images/logo/logo-black.png'%}" height="40px" alt=""></a>
-                                </div>
-                                <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        .btn-outline-secondary:hover {
+            color: #1A27C9;
+            border-color: #1A27C9;
+            background-color: #fff;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            z-index: 10000000;
+
+        }
+
+        .dropdown-menu {
+            z-index: 1000000000;
+        }
+
+        .dropdown-item {
+            z-index: 1000000000;
+        }
+
+        .color-hover:hover {
+            color: #1A27C9;
+        }
+
+        @media (min-width: 992px) {
+            .rounded-lg-3 {
+                border-radius: .3rem;
+            }
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+</head>
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="100">
+    <header id="header-section">
+        <nav class="show-only-pc navbar navbar-expand-lg p-3 " id="navbar-pc">
+            <div class="container" style="box-sizing:content-box;overflow:visible">
+                <div class="navbar-brand-wrapper d-flex w-100" style="margin-left:5em;z-index:1000;">
+                    <a href="/"><img src="{{logo}}" style="height: 60px;" alt=""></a>
+                    <h6 style="padding:0.75rem 0rem 0 0.5rem;font-size:1.0rem;font-size:1.75rem;"
+                        class="text-color-blue">SiteGuide</h6>
+                </div>
+                <div class="collapse navbar-collapse navbar-menu-wrapper header-font" id="navbarSupportedContent-pc">
+                    <ul class="navbar-nav align-items-lg-center align-items-start ml-auto">
+                        <li class="d-flex align-items-center justify-content-between pl-4 pl-lg-0">
+                            <div class="navbar-collapse-logo">
+                                <a href="/"><img src="{% static 'images/logo/logo-black.png'%}" height="40px"
+                                        alt=""></a>
+                            </div>
+                            <button class="navbar-toggler close-button" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="mdi mdi-close navbar-toggler-icon pl-5"></span>
-                                </button>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:home' %}" role="button"><span class="color-hover {% if request.path == '/' %}text-color-blue{% endif %}">Home</span></a>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;"
+                                href="{% url 'home:home' %}" role="button"><span
+                                    class="color-hover {% if request.path == '/' %}text-color-blue{% endif %}">Home</span></a>
 
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" role="button" href="{% url 'home:services' %}"><span class="color-hover dropdown-toggle {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
-                                <ul class="dropdown-menu" style="">
-                                    <li><a class="dropdown-item" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Websites</span></a></li>
-                                    <li><a class="dropdown-item" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Applications</span></a></li>
-                                    <!--                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
-                                    <!--                <li><hr class="dropdown-divider"></li>-->
-                                    <!--                <li><a class="dropdown-item" href="#">Separated link</a></li>-->
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:works' %}"><span class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:testimonials' %}"><span class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" href="{% url 'home:contact' %}"><span class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></a>
-                            </li>
-                            <!--          TODO add help text on click -->
-                            <li class="nav-item btn-contact-us pl-4 pl-lg-0" style="margin:0 5rem 0 1rem;">
-                                <a href="{{calendly_link}}" class="btn btn-info small-btn">
-                                    Book a Strategy Call
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <nav class="show-only-mobile navbar navbar-expand-lg p-3" id="navbar-mobile">
-                <div class="container">
-                    <div class="navbar-brand-wrapper d-flex w-100">
-                        <a href="/"><img src="{{logo}}" style="height: 50px;" alt=""></a>
-                        <h6 style="padding:0.45rem 0rem 0 0.5rem;font-size:0.9rem;">SiteGuide</h6>
-                        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="mdi mdi-menu navbar-toggler-icon" style="color:#000;"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-menu-wrapper p-0" id="navbarSupportedContent">
-                        <ul class="navbar-nav align-items-lg-center align-items-start">
-                            <li class="d-flex align-items-center justify-content-between pl-3" >
-                                <div class="navbar-collapse-logo ">
-                                    <a href="/"><img src="{% static 'images/logo/logo-black.png'%}" height="50px" alt=""></a>
-                                </div>
-                                <button class="navbar-toggler close-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="mdi mdi-close navbar-toggler-icon" style="padding-left:5em;"></span>
-                                </button>
-                            </li>
-                            <li class="nav-item smallFont">
-                                <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:home' %}"><span class="color-hover {% if '/' == request.path %}text-color-blue{% endif %}">Home</span></a>
-                            </li>
-                            <!--          <li class="nav-item">-->
-                            <!--            <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in request.path %}text-color-blue{% endif %}">Services</span></a>-->
-                            <!--          </li>-->
-                             <li class="nav-item dropdown">
-                                <a class="nav-link" style="font-size:1.1rem; color:#000;" role="button"><span class="color-hover dropdown-toggle {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
-                                <ul class="dropdown-menu" style="">
-                                    <li><a class="dropdown-item" style="font-size:1.1rem; color:#000;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a></li>
-                                    <li><a class="dropdown-item" style="font-size:1.1rem; color:#000;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a></li>
-                                    <!--                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
-                                    <!--                <li><hr class="dropdown-divider"></li>-->
-                                    <!--                <li><a class="dropdown-item" href="#">Separated link</a></li>-->
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:works' %}"><span class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:testimonials' %}"><span class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="font-size:1.2rem;color:black;" href="{% url 'home:contact' %}"><span class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></a>
-                            </li>
-                            <!--          TODO add help text on click -->
-                            <li class="nav-item btn-contact-us pl-4 pl-lg-0 pt-3">
-                                <a href="{{calendly_link}}" target="_blank" class="btn btn-outline-info">
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;" role="button"
+                                href="{% url 'home:services' %}"><span
+                                    class="color-hover dropdown-toggle {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
+                            <ul class="dropdown-menu" >
+                                <li><a class="dropdown-item" style="font-size:1.2rem;font-weight:400;color:#000;"
+                                        href="{% url 'home:services' %}"><span
+                                            class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Websites</span></a>
+                                </li>
+                                <li><a class="dropdown-item" style="font-size:1.2rem;font-weight:400;color:#000;"
+                                        href="{% url 'home:services' %}"><span
+                                            class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Applications</span></a>
+                                </li>
+                                <!--                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                                <!--                <li><hr class="dropdown-divider"></li>-->
+                                <!--                <li><a class="dropdown-item" href="#">Separated link</a></li>-->
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;"
+                                href="{% url 'home:works' %}"><span
+                                    class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;"
+                                href="{% url 'home:testimonials' %}"><span
+                                    class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size:1.2rem;font-weight:400;color:#000;"
+                                href="{% url 'home:contact' %}"><span
+                                    class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></a>
+                        </li>
+                        <!--          TODO add help text on click -->
+                        <li class="nav-item btn-contact-us pl-4 pl-lg-0" style="margin:0 5rem 0 1rem;">
+                            <a href="{{calendly_link}}" class="btn btn-info small-btn">
                                 Book a Strategy Call
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-        {% block content %}
-        {% endblock content %}
-        <!-- <div class="bg-light py-5"> -->
-            <section class="contact-details container pt-1 bg-light" id="contact-details-section" >
-                <div class="row text-center text-md-left">
-                    <div class="col-12 col-md-6 col-lg-3 grid-margin">
-                        <img src="{{logo}}" height="50px;" alt="" class="pb-2">
-                        <div class="pt-2">
-                            <a class="text-muted m-0" href="mailto:{{business_mail}}"><span class="color-hover">{{business_mail}}</span></a>
-                            <!--<p class="text-muted m-0">906-179-8309</p>-->
-                        </div>
-                    </div>
-    <!--                <div class="col-12 col-md-6 col-lg-3 grid-margin">-->
-    <!--                    <h5 class="pb-2">Get in Touch</h5>-->
-    <!--                    <p class="text-muted">Don’t miss any updates of our new templates and extensions.!</p>-->
-    <!--                    <form>-->
-    <!--                        <input type="text" class="form-control" id="Email" placeholder="Email id">-->
-    <!--                    </form>-->
-    <!--                    <div class="pt-3">-->
-    <!--                        <button class="btn btn-dark">Subscribe</button>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-                <div class="col-12 col-md-6 col-lg-3 grid-margin">
-                        <h5 class="pb-2">Explore</h5>
-                        <a href="{% url 'home:home' %}" style="color:#6e6e6e;">
-                        <p class="m-0 pb-2"> <span class="color-hover {% if '/' == request.path %}text-color-blue{% endif %}">Home</span></p>
-                        </a>
-                        <a href="{% url 'home:works' %}" style="color:#6e6e6e;">
-                            <p class="m-0 pb-2"><span class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></p>
-                        </a>
-                        <a href="{% url 'home:services' %}" style="color:#6e6e6e;">
-                            <p class="m-0 pb-2"><span class="color-hover {% if 'services' in request.path %}text-color-blue{% endif %}">Services</span></p>
-                        </a>
-                        <a href="{% url 'home:testimonials' %}" style="color:#6e6e6e;">
-                            <p class="m-0 pb-2"><span class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></p>
-                        </a>
-                        <a href="{% url 'home:contact' %}" style="color:#6e6e6e;">
-                            <p class="m-0 pb-2"><span class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></p>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 grid-margin">
-                        <h5 class="pb-2">Our Guidelines</h5>
-                        <a href="{% url 'home:privacy' %}" style="color:#6e6e6e;">
-                            <p class="m-0 pb-2"><span class="color-hover {% if 'privacy' in request.path %}text-color-blue{% endif %}">Privacy policy</span></p>
-                        </a>
-                        <a href="{% url 'home:terms' %}" style="color:#6e6e6e;">
-                            <p class="m-0 pb-2"><span class="color-hover {% if 'terms' in request.path %}text-color-blue{% endif %}">Terms</span></p>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 grid-margin">
-                        <!--<h5 class="pb-2">Our address</h5>-->
-                        <!--<p class="text-muted">India<br></p>-->
-                        <div class="d-flex justify-content-center justify-content-md-start">
-                            <!--                <a href="#"><span class="mdi mdi-facebook"></span></a>-->
-                            <!--                <a href="#"><span class="mdi mdi-twitter"></span></a>-->
-                            <a href="https://www.instagram.com/siteguide.co.in/" ><span class="mdi mdi-instagram" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
-                            <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span class="mdi mdi-linkedin" onMouseOver="this.style.background='#1A27C9'" onMouseOut="this.style.background='#fff'"></span></a>
-                        </div>
-                    </div>
+            </div>
+        </nav>
+        <nav class="show-only-mobile navbar navbar-expand-lg p-3" id="navbar-mobile">
+            <div class="container">
+                <div class="navbar-brand-wrapper d-flex w-100">
+                    <a href="/"><img src="{{logo}}" style="height: 50px;" alt=""></a>
+                    <h6 style="padding:0.45rem 0rem 0 0.5rem;font-size:0.9rem;">SiteGuide</h6>
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="mdi mdi-menu navbar-toggler-icon" style="color:#000;"></span>
+                    </button>
                 </div>
-            </section>
-        </div>
-        <!-- <div class="bg-light"> -->
-            <footer class="border-top">
-                <p class="text-center text-muted pt-4">Copyright © 2020-{{current_year}}<a href="/" class="px-1 text-color-blue color-hover">SiteGuide.</a>All rights reserved.</p>
-            </footer>
-        </div>
-        <script src="{% static 'vendors/jquery/jquery.min.js' %}"></script>
-        <script src="{% static 'vendors/bootstrap/bootstrap.min.js' %}"></script>
-        <script src="{% static 'vendors/owl-carousel/js/owl.carousel.min.js' %}"></script>
-        <script src="{% static 'vendors/aos/js/aos.js' %}"></script>
-        <script src="{% static 'js/landingpage.js' %}"></script>
-        <script src="{% static 'js/slick.js' %}"></script>
+                <div class="collapse navbar-collapse navbar-menu-wrapper p-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-lg-center align-items-start">
+                        <li class="d-flex align-items-center justify-content-between pl-3">
+                            <div class="navbar-collapse-logo ">
+                                <a href="/"><img src="{% static 'images/logo/logo-black.png'%}" height="50px"
+                                        alt=""></a>
+                            </div>
+                            <button class="navbar-toggler close-button" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="mdi mdi-close navbar-toggler-icon" style="padding-left:5em;"></span>
+                            </button>
+                        </li>
+                        <li class="nav-item smallFont">
+                            <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;"
+                                href="{% url 'home:home' %}"><span
+                                    class="color-hover {% if '/' == request.path %}text-color-blue{% endif %}">Home</span></a>
+                        </li>
+                        <!--          <li class="nav-item">-->
+                        <!--            <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in request.path %}text-color-blue{% endif %}">Services</span></a>-->
+                        <!--          </li>-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" style="font-size:1.1rem; color:#000;" role="button"><span
+                                    class="color-hover dropdown-toggle {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" style="font-size:1.1rem; color:#000;"
+                                        href="{% url 'home:services' %}"><span
+                                            class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
+                                </li>
+                                <li><a class="dropdown-item" style="font-size:1.1rem; color:#000;"
+                                        href="{% url 'home:services' %}"><span
+                                            class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
+                                </li>
+                                <!--                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                                <!--                <li><hr class="dropdown-divider"></li>-->
+                                <!--                <li><a class="dropdown-item" href="#">Separated link</a></li>-->
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;"
+                                href="{% url 'home:works' %}"><span
+                                    class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;"
+                                href="{% url 'home:testimonials' %}"><span
+                                    class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="font-size:1.2rem;color:black;"
+                                href="{% url 'home:contact' %}"><span
+                                    class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></a>
+                        </li>
+                        <!--          TODO add help text on click -->
+                        <li class="nav-item btn-contact-us pl-4 pl-lg-0 pt-3">
+                            <a href="{{calendly_link}}" target="_blank" class="btn btn-outline-info">
+                                Book a Strategy Call
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock content %}
+    <!-- <div class="bg-light py-5"> -->
+    <section 
+        class="contact-details container bg-light" 
+        id="contact-details-section"
+        style="
+        margin-right:0;
+        margin-left: 0;
+        margin-bottom: 0;"
+    >
+        <div class="row text-md-left">
+            <div class="col-lg-6 col-sm-12 grid-margin">
+                <div>
+                    <img src="../../media_files/media/logo.png" height="50px;" alt="" class="pb-2">
+                </div>
+                <p class="text-left" style="font-size:16px">Join our newsletter to stay up to date on features and
+                    releases.</p>
+                <div class="d-flex flex-row justify-content-start" style="margin-bottom: 10px;">
+                    <input type="text" style="margin-right: 10px; width:70%; border-color: #1A27C9"
+                        placeholder="Enter your Email" />
+                    <button style="border-color: #1A27C9 ; background: white">Subscribe</button>
+                </div>
+                <p class="text-left">By subscribing you agree to with our Privacy Policy and provide consent to receive
+                    updates from our company.</p>
+                <div class="pt-2">
+                    <a class="text-muted m-0" href="mailto:{{business_mail}}"><span class="color-hover"></span></a>
+                    <!--<p class="text-muted m-0">906-179-8309</p>-->
+                </div>
+            </div>
+            <!--                <div class="col-12 col-md-6 col-lg-3 grid-margin">-->
+            <!--                    <h5 class="pb-2">Get in Touch</h5>-->
+            <!--                    <p class="text-muted">Don’t miss any updates of our new templates and extensions.!</p>-->
+            <!--                    <form>-->
+            <!--                        <input type="text" class="form-control" id="Email" placeholder="Email id">-->
+            <!--                    </form>-->
+            <!--                    <div class="pt-3">-->
+            <!--                        <button class="btn btn-dark">Subscribe</button>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <div class="col-lg-2 col-sm-4 grid-margin">
+                <h5 class="pb-2">Explore</h5>
+                <a href="{% url 'home:home' %}" style="color:#6e6e6e;">
+                    <p class="m-0 pb-2"> <span
+                            class="color-hover {% if '/' == request.path %}text-color-blue{% endif %}">Home</span></p>
+                </a>
+                <a href="{% url 'home:works' %}" style="color:#6e6e6e;">
+                    <p class="m-0 pb-2"><span
+                            class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span>
+                    </p>
+                </a>
+                <a href="{% url 'home:services' %}" style="color:#6e6e6e;">
+                    <p class="m-0 pb-2"><span
+                            class="color-hover {% if 'services' in request.path %}text-color-blue{% endif %}">Services</span>
+                    </p>
+                </a>
+                <a href="{% url 'home:testimonials' %}" style="color:#6e6e6e;">
+                    <p class="m-0 pb-2"><span
+                            class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span>
+                    </p>
+                </a>
+                <a href="{% url 'home:contact' %}" style="color:#6e6e6e;">
+                    <p class="m-0 pb-2"><span
+                            class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span>
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-4 grid-margin">
+                <h5 class="pb-2">Our Guidelines</h5>
+                <a href="{% url 'home:privacy' %}" style="color:#6e6e6e;">
+                    <p class="m-0 pb-2"><span
+                            class="color-hover {% if 'privacy' in request.path %}text-color-blue{% endif %}">Privacy
+                            policy</span></p>
+                </a>
+                <a href="{% url 'home:terms' %}" style="color:#6e6e6e;">
+                    <p class="m-0 pb-2"><span
+                            class="color-hover {% if 'terms' in request.path %}text-color-blue{% endif %}">Terms</span>
+                    </p>
+                </a>
+            </div>
+            <div class="col-lg-2 col-sm-4 grid-margin">
+                <!--<h5 class="pb-2">Our address</h5>-->
+                <!--<p class="text-muted">India<br></p>-->
+                <h5 class="pb-2">Follow Us</h5>
+                <div>
+                    <!--                <a href="#"><span class="mdi mdi-facebook"></span></a>-->
+                    <!--                <a href="#"><span class="mdi mdi-twitter"></span></a>-->
+                    <div class="d-flex flex-row justify-content-start">
+                        <a href="https://www.instagram.com/siteguide.co.in/"><span class="mdi mdi-instagram"
+                                onMouseOver="this.style.background='#1A27C9'"
+                                onMouseOut="this.style.background='#fff'"></span></a>
+                        <p style="font-size:14px;">Instagram</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start">
+                        <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span
+                                class="mdi mdi-linkedin" onMouseOver="this.style.background='#1A27C9'"
+                                onMouseOut="this.style.background='#fff'"></span></a>
+                        <p style="font-size:16px;">LinkedIn</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start">
+                        <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span
+                                class="mdi mdi-facebook" onMouseOver="this.style.background='#1A27C9'"
+                                onMouseOut="this.style.background='#fff'"></span></a>
+                        <p style="font-size:15px;">Facebook</p>
+                    </div>
+                    <div class="d-flex flex-row justify-content-start">
+                        <a href="https://www.linkedin.com/company/siteguide/?viewAsMember=true"><span
+                                class="mdi mdi-twitter" onMouseOver="this.style.background='#1A27C9'"
+                                onMouseOut="this.style.background='#fff'"></span></a>
+                        <p style="font-size:16px;">Twitter</p>
+                    </div>
 
-        <script>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+        <footer class="border-top bg-light">
+            <p class="text-center text-muted pt-4 pb-4" style="margin-bottom: 0;">Copyright © 2020-{{current_year}}<a href="/"
+                    class="px-1 text-color-blue color-hover">SiteGuide.</a>All rights reserved.</p>
+        </footer>
+    <script src="{% static 'vendors/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendors/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendors/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'vendors/aos/js/aos.js' %}"></script>
+    <script src="{% static 'js/landingpage.js' %}"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+    <script>
         $(document).ready(function () {
-             $('#gallery').slick({
-                  slidesToShow: 7,
-                  slidesToScroll: 1,
-                  autoplay: true,
-                  autoplaySpeed: 0,
-                  speed: 8000,
-                  pauseOnHover: false,
-                  cssEase: 'linear',
-                  arrow: true,
+            $('.customer-logos').slick({
+                slidesToShow: 5,
+                slidesToScroll: 0,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                nextArrow:'.arrow_prev',
+                prevArrow:'.arrow_next',
+                // dots: true
             });
         });
-        </script>
-    </body>
+
+    </script>
+</body>
+
 </html>
