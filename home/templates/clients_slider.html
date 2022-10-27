@@ -1,3 +1,4 @@
+{% load static %}
 <!-- <div class="content-wrapper pt-5">
     <div class="container">
 
@@ -28,7 +29,7 @@
         -moz-filter: grayscale(100%);
     }
 
-    .slick-slide img:hover {
+    .slide img:hover {
         filter: grayscale(0%);
         -webkit-filter: grayscale(0%);
         -moz-filter: grayscale(0%);
@@ -43,15 +44,15 @@
 </style>
 <div class=" container d-flex  justify-content-around align-items-center">
     <div class="arrow_prev slide">
-        <img src="../../media_files/media/Vector (5).png" alt="">
+        <img src="../../media_files/media/Vector (5).png" class="carousel-control-prev-icon ms-5 me-4" alt="">
     </div>
     <div class="container">
 
-        <section class="customer-logos slider">
+        <section class="customer-logos slider px-4">
             {% for object in brands %}
             <div class="slide">
 
-                <img src="{{object.logo.url}}" style="width:100%; height:50" />
+                <img src="{{object.logo.url}}" style="width:50%;" />
 
             </div>
             {% endfor %}
@@ -60,6 +61,6 @@
 
     </div>
     <div class="arrow_next slide">
-        <img src="../../media_files/media/Vector (4).png" alt="">
+        <img src="../../media_files/media/Vector (4).png" class="carousel-control-prev-icon ms-4 me-5" alt="">
     </div>
 </div>
