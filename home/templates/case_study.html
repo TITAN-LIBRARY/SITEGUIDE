@@ -3,7 +3,24 @@
 
 {% block content %}
 <style>
-  @media (max-width: 576px) {
+  .pad-num{
+    padding: 3.2% 8%;
+  }
+  @media (max-width: 1115px) {
+    .pad-num{
+      padding: 3.2% 6%;
+    }
+  }
+  .text-container{
+    font-size: 14px;
+    padding: 0.8%;
+  }
+  @media (max-width: 1199px) {
+    .pad-num{
+      padding: 3.2% 6%;
+    }
+  }
+  @media (max-width: 768px) {
     .container-small {
       width: 100% !important;
     }
@@ -74,6 +91,28 @@
     margin-right: -20px;
     /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e"); */
   }
+ 
+  .div-container-start-proj{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-left: 5.5rem;
+  }
+  .img-arrow{
+    width: 10rem;
+    position: relative;
+    top: -2.5rem;
+    left: -3rem;
+  }
+  @media (min-width: 600px) and (max-width: 992px){
+    .img-arrow{
+      visibility: hidden;
+    }
+    .div-container-start-proj{
+      padding-left: 1rem;
+    }
+  }
+
 </style>
 
 <br><br><br>
@@ -160,23 +199,19 @@
       <div class="mt-5">
         <div class="row">
           <div class="col-lg-8 col-sm-12">
-            <h1 class="text-color-black text-align testimonial-font" style="font-size: 42px; font-weight: 900; width: 730px;">
+            <h1 class="text-color-black mt-4 testimonial-font" style="font-size: 40px; font-weight: 900; padding-top: 42px;">
               Count that matters
             </h1>
             <div class="d-flex flex-wrap" >
               <div style="background-color: #1a27c9; 
                 color: #fff; 
-                border-right: 1px solid gray;
-                padding-left: 25px;
-                padding-right: 25px;
-                padding-top: 21px;
-                padding-bottom: 21px;" class="container-small">
-                <h1 class="text-center fontSize-36" style="font-size: 42px">
+                border-right: 1px solid gray;" class="pad-num container-small">
+                <h1 class="text-center fontSize-36" style="font-size: 42px;">
                   10.1%
                 </h1>
                 <p class="text-center" style="font-size: 18px">New listing</p>
               </div>
-              <div style="background-color: #1a27c9; color: #fff;border-right: 1px solid gray;" class="p-4 container-small">
+              <div style="background-color: #1a27c9; color: #fff;border-right: 1px solid gray" class="pad-num container-small">
                 <h1 class="text-center fontSize-36" style="font-size: 42px">
                   5.6%
                 </h1>
@@ -184,7 +219,7 @@
                   User Acquisition
                 </p>
               </div>
-              <div style="background-color: #1a27c9; color: #fff" class="p-4 container-small">
+              <div style="background-color: #1a27c9; color: #fff;" class="pad-num container-small">
                 <h1 class="text-center fontSize-36" style="font-size: 42px">
                   3%
                 </h1>
@@ -269,33 +304,41 @@
             <p class="text-color-black mt-4" style="font-size: 20px; font-weight: 900">
               Varun Krishnan
             </p>
-            <p>Founder, Naman Foods</p>
+            <p style="margin-bottom: 80px;">Founder, Naman Foods</p>
           </div>
           <div class="col-lg-4 col-sm-12 sticky-lg-top container-small">
-            <img src="{% static 'images/misc/media/image 18.png' %}" alt="" style="width: 200px"
+            <img src="{% static 'images/misc/media/image 18.png' %}" alt="" style="width: 300px;"
               class="rounded mx-auto d-block" />
             <div style="background-color: #1a27c9; 
                 margin-top: -70px; 
-                width:320px; 
-                height:369px; 
-                margin-left: 5rem;" class="container-small p-xs-2">
+                height: 306px;
+                width: 100%;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-top: 4rem;
+                min-width: 250px;
+                " class="container-small p-xs-2">
               <h1 style="padding-top: 70px; color: #fff; font-size: 24px" class="text-center">
                 Start the project now!
               </h1>
-              <p style="color: #fff; font-size: 14px" class="text-center">
+              <p style="color: #fff;" class="text-center text-container">
                 We craft custom websites and applications to transform your
                 business
               </p>
-              <div class="mt-3 text-center">
-                <button style="
-                    background-color: #f3f3ff;
-                    border-color: #1a27c9;
-                    color: #1a27c9;
-                    padding: 10px;
-                    margin-bottom: 20px;
-                  ">
-                  <span style="font-size: 18px">Book a strategy call</span>
-                </button>
+              <div class="div-container-start-proj">
+                <div class="mt-3 text-center ml-5">
+                  <button class="btn-strategy-call" style="
+                      background-color: #f3f3ff;
+                      border-color: #1a27c9;
+                      color: #1a27c9;
+                      padding: 10px;
+                      min-width: 190px;
+                    ">
+                    <span style="font-size: 18px">Book a strategy call</span>
+                  </button>
+                </div>
+              <img src=" {% static 'images/media/arrow-gif 1.png' %}" class="img-arrow">
               </div>
             </div>
           </div>
@@ -306,3 +349,4 @@
 
 </div>
 {% endblock %}
+
