@@ -113,6 +113,20 @@
     }
   }
 
+  @media (max-width: 400px){
+    .ps-5{
+      padding-left: 0 !important;
+    }
+  }
+  @media (min-width: 990px){
+    #sticky-in-desktop{
+      position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    }
+  }
+
 </style>
 
 <br><br><br>
@@ -196,7 +210,7 @@
         </div>
       </div>
       <br><br>
-      <div class="mt-5">
+      <div class="mt-5" style="overflow: auto;">
         <div class="row">
           <div class="col-lg-8 col-sm-12">
             <h1 class="text-color-black mt-4 testimonial-font" style="font-size: 40px; font-weight: 900; padding-top: 42px;">
@@ -282,6 +296,7 @@
             <h1 class="text-color-black mt-4 testimonial-font" style="font-size: 40px; font-weight: 900">
               Results
             </h1>
+            
             <p>
               We increased listing creation by 10.1%, User acquisition by 5.6% &
               new inquiries grew by 3% in one year. Maintaining the overall rating
@@ -306,7 +321,8 @@
             </p>
             <p style="margin-bottom: 80px;">Founder, Naman Foods</p>
           </div>
-          <div class="col-lg-4 col-sm-12 sticky-lg-top container-small">
+          <div class="col-lg-4 col-sm-12 container-small">
+           <div id="sticky-in-desktop">
             <img src="{% static 'images/misc/media/image 18.png' %}" alt="" style="width: 300px;"
               class="rounded mx-auto d-block" />
             <div style="background-color: #1a27c9; 
@@ -340,6 +356,7 @@
                 </div>
               <img src=" {% static 'images/media/arrow-gif 1.png' %}" class="img-arrow">
               </div>
+            </div>
             </div>
           </div>
         </div>

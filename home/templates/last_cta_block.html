@@ -1,12 +1,80 @@
+<style>
+    .main-cta{
+        display: flex;
+        background-color: #1A27C9;
+        color: #fff;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .btn-cta button{
+       border-radius: 5px;
+       width: 59px;
+       height: 59px;
+       border: none;
+       margin: 60px;
+    }
+    .content-btn-cta{
+       display: flex;
+       justify-content: space-around;
+    }
+
+    .content-cta button a{
+        text-decoration: none;
+        color:#1A27C9;
+        font-size: 1.5rem;
+    }
+    .content-cta{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 2.4rem;
+    }
+
+    .content-cta p{
+        font-size: 1.1rem;
+    }
+    .content-cta h1{
+        font-size: 2.4rem;
+    }
+
+</style>
+
+
 <div class="content-wrapper pt-5">
     <div class="container">
-        <div class="banner-smaller" style="height:100%display: flex;align-items: center;justify-content: center;color: #000;margin: -3rem 0 -6rem 0;">
+        <div class="banner-smaller" style="height:100%;display: flex;align-items: center;justify-content: center;color: #000; ">
             <div class="container pt-5" >
-                <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 40px;line-height: 1.5;">Let's Talk about your <span class="text-color"> Project</span></h1>
+                <!-- <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 40px;line-height: 1.5;">Let's Talk about your <span class="text-color"> Project</span></h1>
                 <h1 class="font-weight-semibold show-only-mobile mt-0 pt-0" style="font-size: 30px;line-height: 1.3;">Let's Talk about your <span class="text-color"> Project</span></h1>
                 <div class="pt-2">
                     <a href="{{calendly_link}}" class="btn btn-info">Book a FREE Strategy Call</a>
+                </div> -->
+                <br>
+                <br>
+                <div class="main-cta">
+                    <div class="img-cta" style="position: relative; top: -50px; z-index: 2;">
+                        <img src="/SITEGUIDE/home/static/images/media/image_16.png" alt="">
+                        <div style="width: 20rem; height: 14rem; background-color:pink; margin:20px"></div>
+                    </div>
+                    <div class="content-btn-cta">
+                    <div class="content-cta">
+                        <h1>Click to book a strategy call</h1>
+                        <p>Frequently asked questions ordered by Popularity.</p>
+                        <!-- <button>
+                            <a href="">View all Projects <span> ↗ </span></a>
+                        </button> -->
+
+                    </div>
+
+                    <div class="btn-cta">
+                        <button>
+                            <p>---><p>
+                        </button>
+                    </div>                         
                 </div>
+                </div>          
                 <div class="container mt-5" >
                     <div class="row align-items-center" style="box-sizing: border-box;">
                         <!-- <h6 class="text-center">Technologies we love</h6>-->
