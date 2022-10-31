@@ -1,3 +1,4 @@
+{% load static %}
 <style>
     .main-cta{
         display: flex;
@@ -54,9 +55,10 @@
                     <a href="{{calendly_link}}" class="btn btn-info">Book a FREE Strategy Call</a>
                 </div> -->
             
-                <div class="img-cta" style="position: absolute; top: -50px; z-index: 20;">
-                    <img src="/SITEGUIDE/home/static/images/media/image_16.png" alt="">
-                    <div style="width: 20rem; height: 14rem; background-color:pink; margin:20px"></div>
+                <div class="img-cta" style="position:absolute; z-index: 20;">
+                    <div style="width: 20rem; height: 14rem; background-color:pink; margin:20px">
+                        <img src="{% static 'images/media/image_16.png' %}" alt="my Image">
+                    </div>
                  </div>
                 <div class="main-cta">
                     <div style="position: relative; width: 20rem; height: 14rem;">
