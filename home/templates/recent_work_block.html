@@ -1,3 +1,4 @@
+{% load static %}
 <div class="content-wrapper pt-5">
     <div class="container">
         <section class="features-overview pt-4" id="features-section" >
@@ -64,9 +65,24 @@
                             <img src="../../media_files/media/Vector (4).png" alt="" style="padding-left: 10px;">
                         </div>
                     </div>
-                    <center class="mb-5 mt-2" style="float: right">
-                        <!--            Yellow Button -->
+                    <!-- <center class="mb-5 mt-2" style="float: right">
+                                   Yellow Button
                         <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
+                    </center> -->
+                    <center class="mb-5 mt-5" 
+                            style="
+                            background-color: #F3F3FF;
+                            border-color: #d9d9d9;
+                            color: #1A27C9;
+                            padding: 10px;
+                            float:right;
+                            padding: 12px 36px;
+                            margin-top:12px;
+                            justify-content: center;
+                            align-items: center;        
+                    ">
+              <span style="font-size: 18px">Live Preview</span>
+              <img src="{% static 'images/media/home-view-all-arrow.png' %}" style="color:#1A27C9" class="ml-2" alt="" />
                     </center>
                 </div>
                 
