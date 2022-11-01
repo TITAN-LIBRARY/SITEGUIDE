@@ -12,9 +12,15 @@
        border-radius: 5px;
        width: 59px;
        height: 59px;
-       border: none;
+       background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
        margin: 60px;
-       margin-top: 20px;
+       margin-top: 50px;
     }
     .content-btn-cta{
        display: flex;
@@ -42,11 +48,32 @@
         font-size: 2.4rem;
     }
 
+    .img-cta img{
+        width: 19rem;
+        height:14rem;
+        margin:20px;
+        padding-bottom: 20px;
+    }
+    @media (max-width: 990px){
+        .content-cta{
+           align-items: center;
+        }
+    }
+    
+    .avoid-overlap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 </style>
 
 
-<div class="content-wrapper pt-5">
-    <div class="container">
+<div class="content-wrapper pt-5 avoid-overlap">
+    <div class="container-fluid">
+        <!-- <div> -->
         <div class="banner-smaller" style="height:100%;display: flex;align-items: center;justify-content: center;color: #000; ">
             <div class="container pt-5" >
                 <!-- <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 40px;line-height: 1.5;">Let's Talk about your <span class="text-color"> Project</span></h1>
@@ -55,27 +82,24 @@
                     <a href="{{calendly_link}}" class="btn btn-info">Book a FREE Strategy Call</a>
                 </div> -->
             
-                <div class="img-cta" style="position:absolute; z-index: 20;">
-                    <div style="width: 20rem; height: 14rem; background-color:pink; margin:20px">
-                        <img src="{% static 'images/media/image_16.png' %}" alt="my Image">
-                    </div>
-                 </div>
+                
                 <div class="main-cta">
                     <div style="position: relative; width: 20rem; height: 14rem;">
+                        <div class="img-cta" style="position: absolute; top: -10px;">
+                            <img src="{% static 'images/media/image_16.png' %}" >
+                    </div>
                     </div>
                     <div class="content-btn-cta" style="display: flex; flex-wrap: wrap;">
                     <div class="content-cta">
                         <h1>Click to book a strategy call</h1>
                         <p>Frequently asked questions ordered by Popularity.</p>
-                        <!-- <button>
-                            <a href="">View all Projects <span> ↗ </span></a>
-                        </button> -->
+                        
 
                     </div>
 
                     <div class="btn-cta">
                         <button>
-                            <p>---><p>
+                            <a href=""><img src="{% static 'images/media/Vector.png' %}" ></a>
                         </button>
                     </div> 
                     </div>                        

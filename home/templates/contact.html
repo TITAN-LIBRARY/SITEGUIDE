@@ -2,12 +2,14 @@
 {% load static %}
 {% block content %}
 
-  <div class="banner-smaller" style="color: #fff;">
-    <div class="container">
-      <section class="mb-5" id="features-section" >
-        <div class="content-header">
-            <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 50px;line-height: 1.5; color:#000;">Contact<span class="text-color-blue"> Us</span></h1>
-          <h6 class="section-subtitle text-color-blue">How can we help you?</h6>
+
+  <div class="pb-5">
+    <div class="container pb-5">
+      <section class="" id="features-section" >
+        <div class=" pb-5" style="text-align: center;">
+            <h1 class="font-weight-semibold show-only-pc mt-0 pt-0" style="font-size: 50px;line-height: 1.5;">Contact<span class="text-color"> Us</span></h1>
+            <h1 class="font-weight-semibold show-only-mobile mt-0 pt-0" style="font-size: 30px;line-height: 1.5;">Contact<span class="text-color"> Us</span></h1>
+          <h6 class="section-subtitle">How can we help you?</h6>
         </div>
 
     {% if messages %}
@@ -15,7 +17,7 @@
           <div class="" style="margin-top: -3rem; margin-bottom: 1rem;"> <span class="text-color">Message submitted, </span> {{ message }} </div>
         {% endfor %}
     {% endif %}
-    <!-- <form class="pb-5" method="post">
+    <form class="pb-5" method="post">
         {% csrf_token %}
         <div class="row pb-3">
             <div class="col-md-4 ml-auto pb-3">
@@ -96,8 +98,8 @@
       </section>
     </div>
   </div>
-<br>
-<div class="show-only-mobile" style="padding-bottom: 18rem;">
+
+
 
 </div>
 {% endblock content %}
