@@ -21,6 +21,8 @@ $('.owl-carousel').owlCarousel({
     nav:false,
     dot:true,
     autoplay: true,
+    nav: true,
+    navText: [`<img alt="" class="ms-5 me-4" src="../../media_files/media/Vector (5).png">`, `<img alt="" class=" ms-4 me-5" src="../../media_files/media/Vector (4).png">`],
     slideTransition: 'linear',
     autoplayHoverPause: true,
     responsive:{
