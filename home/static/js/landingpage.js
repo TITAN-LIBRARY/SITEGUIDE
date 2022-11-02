@@ -36,6 +36,13 @@ $('.owl-carousel').owlCarousel({
   }
 })
 
+// active class
+$('.owl-dot').click(function () {
+  $('.owl-dot').removeClass('active');
+  $(this).addClass('active');
+});
+
+
 // SCROLLSPY
 $(document).ready(function() {
   $(".nav-link").click(function() {

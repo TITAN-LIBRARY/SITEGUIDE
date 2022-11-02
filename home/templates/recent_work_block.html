@@ -1,7 +1,36 @@
 {% load static %}
+<style>
+     .owl-dots .owl-dot {
+  outline: none;
+}
+ .owl-dots .owl-dot span {
+  display: inline-block;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  box-sizing: border-box;
+  /* background-color: red; */
+  border: 3px solid #1A27C9;
+  border-radius: 50%;
+  transform: scale(0.6);
+  transition: all 0.3s ease-in-out;
+  opacity: 0.7;
+}
+ .owl-dots .owl-dot.active span {
+  background-color: #1A27C9;
+  /* border-color: red; */
+  transform: scale(0.9);
+}
+.owl-dots button{
+    outline: none;
+    border: none;
+    /* remove background color of button */
+    background: none;
+
+}
+</style>
 <div class="content-wrapper pt-5">
     <div class="container">
-        <section class="features-overview pt-4" id="features-section" >
+        <section class="features-overview pt-4 " id="features-section" >
             <div class="content-header pt-3">
                 <h2 class="heading-title pb-2">Our Recent Works</h2>
                 <h6 class="section-subtitle text-muted">We craft custom websites and applications to transform your business</h6>
@@ -69,7 +98,23 @@
                                    Yellow Button
                         <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
                     </center> -->
-                    <center class="mb-5 mt-5" 
+
+                    <script>
+                        // Set active class on one element at the time on button
+                    </script>
+
+                <div style="display: flex;justify-content: space-between;">
+                    
+                    <div class="owl-dots" style="margin-top: 50px;">
+                        <button role="button" class="owl-dot active"><span></span></button>
+                        <button role="button" class="owl-dot"><span></span></button>
+                        <button role="button" class="owl-dot"><span></span></button>
+                        <button role="button" class="owl-dot"><span></span></button>
+                    </div>
+                    
+
+
+                    <a href="./"><center class="mb-5 mt-5" 
                             style="
                             background-color: #F3F3FF;
                             border-color: #d9d9d9;
@@ -81,10 +126,14 @@
                             justify-content: center;
                             align-items: center;        
                     ">
-              <span style="font-size: 18px">Live Preview</span>
+              <span style="font-size: 18px">View all projects</span>
               <img src="{% static 'images/media/home-view-all-arrow.png' %}" style="color:#1A27C9" class="ml-2" alt="" />
                     </center>
-                </div>
+                </a>
+            </div>
+                
+        
+        </div>
                 
                 
             </section>

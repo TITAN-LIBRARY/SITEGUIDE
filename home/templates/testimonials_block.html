@@ -1,5 +1,25 @@
 
+<style>
+    .owl-dot{
+        float: left;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .bottom-btn{
+        bottom: 150;
+    }
+    @media (max-width: 990px) {
+        .bottom-btn{
+            bottom: 120;
+        }
+    }
+    @media (max-width: 768px) {
+        .bottom-btn{
+            bottom: 100;
+        }
+    }
 
+</style>
 
 <div class="content-wrapper p-0">
     <div class="container">
@@ -27,9 +47,15 @@
                     {% endfor %}
                 </div>
             </div>
-            <center class="mb-5" style="margin-top:-3em;">
-                <a href="{% url 'home:testimonials' %}" class="btn btn-outline-info">View more</a>
+            <a href="./">
+            <center style="background-color: #F3F3FF;border-color: #d9d9d9;color: #1A27C9;padding: 10px;float:right;padding: 12px 36px;margin-top:12px;justify-content: center;align-items: center; position:relative;" class="bottom-btn">
+                    <span style="font-size: 18px">View all Testimonials</span>
+                    <img alt="" class="ml-2" src="/static/images/media/home-view-all-arrow.png" style="color:#1A27C9">
             </center>
+        </a>
+            <!-- <center class="mb-1" style="margin-top:3em;">
+                <a href="{% url 'home:testimonials' %}" class="btn btn-outline-info">View more</a>
+            </center> -->
         </section>
     </div>
 </div>
