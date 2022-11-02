@@ -64,7 +64,6 @@
                             <img src="../../media_files/media/Vector (5).png" alt="" style="padding-right: 10px;">
                         </div>
                         <div class="container">
-                    
                             <section class="case-studies slider d-flex">
                                 {% for object in project %}
                         <div class="col-12 col-md-6 col-lg-6 stretch-card mb-3 mt-4 mb-lg-0" data-aos="zoom-in">
@@ -98,14 +97,27 @@
                                    Yellow Button
                         <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
                     </center> -->
+                    <style>
+                        .work-carousel-btn{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-left: 20px;
+                            margin-right: 20px;
+                        }
+                        @media (max-width: 600px) {
+                            .work-carousel-btn{
+                                display: flex;
+                                justify-content: center;
+                            }
+                            .carousel-btn-dots{
+                                display: none;
+                            }
+                        }
+                    </style>
 
-                    <script>
-                        // Set active class on one element at the time on button
-                    </script>
-
-                <div style="display: flex;justify-content: space-between;">
+                <div class="work-carousel-btn">
                     
-                    <div class="owl-dots" style="margin-top: 50px;">
+                    <div class="owl-dots carousel-btn-dots" style="margin-top: 50px;">
                         <button role="button" class="owl-dot active"><span></span></button>
                         <button role="button" class="owl-dot"><span></span></button>
                         <button role="button" class="owl-dot"><span></span></button>

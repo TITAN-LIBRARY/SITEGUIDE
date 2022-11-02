@@ -1,24 +1,49 @@
 
 <style>
-    .owl-dot{
+    .owl-dots{
         float: left;
-        padding-left: 20px;
-        padding-top: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
     }
-    .bottom-btn{
-        bottom: 150;
+    #testimonial-btn{
+        bottom:140;
+        right:30;
+    }
+    @media (max-width: 400px) {
+        #testimonial-btn{
+            bottom:0;
+            top:6;
+            right:50%;
+        }
+    }
+    @media (max-width: 600px) {
+        .owl-dots{
+            /* make owl-dot float to center */
+            float: none;
+            margin-left: 0;
+        }
+        #testimonial-btn{
+            /* float the btn to center */
+            float: none;
+            right:50%;
+            bottom: 0;
+            top:10;
+        }
+    }
+    @media (max-width: 760px) {
+        #testimonial-btn{
+            /* float the btn to center */
+            float: none;
+            bottom: 90;
+            right:30;
+        }
     }
     @media (max-width: 990px) {
-        .bottom-btn{
-            bottom: 120;
+        #testimonial-btn{
+            float: none;
+            bottom: 90;
         }
-    }
-    @media (max-width: 768px) {
-        .bottom-btn{
-            bottom: 100;
-        }
-    }
-
+    }   
 </style>
 
 <div class="content-wrapper p-0">
@@ -48,7 +73,7 @@
                 </div>
             </div>
             <a href="./">
-            <center style="background-color: #F3F3FF;border-color: #d9d9d9;color: #1A27C9;padding: 10px;float:right;padding: 12px 36px;margin-top:12px;justify-content: center;align-items: center; position:relative;" class="bottom-btn">
+            <center id="testimonial-btn" style="float:right;background-color: #F3F3FF;border-color: #d9d9d9;color: #1A27C9;padding: 10px;padding: 12px 36px;margin-top:12px;justify-content: center;align-items: center; position:relative;" class="bottom-btn">
                     <span style="font-size: 18px">View all Testimonials</span>
                     <img alt="" class="ml-2" src="/static/images/media/home-view-all-arrow.png" style="color:#1A27C9">
             </center>
