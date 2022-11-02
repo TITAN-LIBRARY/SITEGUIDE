@@ -59,38 +59,51 @@
                         </div>
                     </div>
                     {% endfor %} -->
-                    <div class=" d-flex  justify-content-around align-items-center">
-                        <div class="arrow_prev slide">
-                            <img src="../../media_files/media/Vector (5).png" alt="" style="padding-right: 10px;">
+                    <div class=" d-flex justify-content-around align-items-center">
+                        <div class="arrow_prev slide  ">
+                            <img src="../../media_files/media/Vector (5).png" alt="" class="carousel-control-prev-icon ms-5 me-4" >
                         </div>
                         <div class="container">
+
                             <section class="case-studies slider d-flex">
                                 {% for object in project %}
-                        <div class="col-12 col-md-6 col-lg-6 stretch-card mb-3 mt-4 mb-lg-0" data-aos="zoom-in">
+                        <div class="" data-aos="zoom-in" style="height: 400px; width:297px;" >
                             <div class="card color-cards shadow p-0">
                                 <div class="card-body p-0">
                                     <div class="bg-primary text-center card-contents p-0">
                                         <div class="card-image p-0">
-                                            <img src="{{object.image.url}}" class="case-studies-card-img" style="height: 250px;width: 100%" alt="" >
+                                            <img src="{{object.image.url}}" class="case-studies-card-img card-img-top" style="height: 232px;width: 297px;" alt="" >
                                         </div>
                                         <div class="card-desc-box d-flex align-items-center justify-content-around">
                                             <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
                                         </div>
                                     </div>
-                                    <div class="card-details text-center pt-4">
-                                        <h6 class="m-0 pb-1">{{object.project_name}}</h6>
-                                        <p>{{object.case_study}}</p>
+                                    <div class="card-details ps-3 pe-3 pt-4">
+                                        <h4 class="m-0 pb-1">{{object.project_name}}</h4>
+                                        <p class="text-wrap" >{{object.case_study}}</p>
+                                    </div>
+                                    <div class="d-flex flex-row pb-2 ps-3" style="border-radius: 0; gap: 4px;" >
+                                        <a href="{{calendly_link}}" class="btn btn-info btn-lg me-md-2"> View Site</a>
+                                        <a href="" class="btn btn-outline-secondary btn-lg ">Read Case Study</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="card" style="width: 18rem; margin-right:3rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Strategy | Web Development | WordPress Development.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div> -->
                         {% endfor %}
                     
                             </section>
                     
                         </div>
                         <div class="arrow_next slide">
-                            <img src="../../media_files/media/Vector (4).png" alt="" style="padding-left: 10px;">
+                            <img class="carousel-control-prev-icon ms-4 me-5" src="../../media_files/media/Vector (4).png" alt="" style="margin-right: 10px;">
                         </div>
                     </div>
                     <!-- <center class="mb-5 mt-2" style="float: right">
