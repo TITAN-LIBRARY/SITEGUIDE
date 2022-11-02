@@ -112,6 +112,47 @@
       padding-left: 1rem;
     }
   }
+  .problem-text{
+    margin-right: 10rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size:18px;
+    line-height: 27px;
+  }
+  .problem-list{
+    margin-right: 10rem;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size:18px;
+    line-height: 27px;
+  }
+  .img-quote {
+    margin-right: 7rem;
+  }
+  @media (min-width: 300px) and (max-width: 900px) {
+    .problem-text {
+      margin: 0;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size:18px;
+      line-height: 27px;
+    }
+    .problem-list {
+      margin: 0;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 600;
+      font-size:18px;
+      line-height: 27px;
+    }
+    .img-quote{
+      margin: 0;
+    }
+    
+  }
 
   @media (max-width: 400px){
     .ps-5{
@@ -210,7 +251,7 @@
         </div>
       </div>
       <br><br>
-      <div class="mt-5" style="overflow: hidden; text-align:justify;">
+      <div class="mt-5" style="overflow: hidden;">
         <div class="row">
           <div class="col-lg-8 col-sm-12 pe-5 ">
             <h1 class="text-color-black mt-4 testimonial-font" style="font-size: 40px; font-weight: 900; padding-top: 42px;">
@@ -243,33 +284,29 @@
             <h1 class="text-color-black mt-4 testimonial-font" style="font-size: 40px; font-weight: 900">
               Objective
             </h1>
-            <p style="font-family: 'Roboto';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 27px;  " >
+            <p class="problem-text" >
               The client Ishan Kukreja came to us with three main goals switching
               from a WordPress website to custom codded website, to grow &
               efficiently manage their business vownviews.
             </p>
             <ul>
-              <li>
-                To build a feature-rich website with a dashboard for users to plan
+              <li class="problem-list">
+                To build a <span class="text-color-blue">feature-rich website</span> with a dashboard for users to plan
                 their weddings.
               </li>
-              <li>
-                To create a dashboard for bridging the gap between vendors and
-                users.
+              <li class="problem-list">
+                To create a dashboard for bridging the gap between <span class="text-color-blue">vendors and
+                users. </span>
               </li>
-              <li>
-                To increase business efficiency and optimize their business and
+              <li class="problem-list">
+              <span class="text-color-blue"> To increase business efficiency</span> and optimize their business and
                 save time.
               </li>
             </ul>
             <h1 class="text-color-black mt-4 testimonial-font" style="font-size: 40px; font-weight: 900">
               Solution
             </h1>
-            <p>
+            <p class="problem-text" >
               The client Ishan Kukreja came to us with three main goals switching
               from a WordPress website to custom codded website, to grow &
               efficiently manage their business vownviews.
@@ -278,20 +315,20 @@
               Custom Solution
             </h1>
             <ul>
-              <li>
-                For User: We built Wedding planning tools such as a checklist,
+              <li class="problem-text">
+                <span class="text-color-blue font-weight-bold"> For User:</span> We built Wedding planning tools such as a checklist,
                 budget management, Guest list management, Vendor shortlisting &
                 saving memories which help the user manage their wedding
                 hassle-free and in an efficient manner.
               </li>
-              <li>
-                For Vendor: We built a simplified process for the creation of
+              <li class="problem-text">
+                <span class="text-color-blue font-weight-bold"> For Vendor:</span> We built a simplified process for the creation of
                 listing, enquires management, special offer, connecting Instagram
                 to showcase portfolio, connecting vendors google my business for
                 review, and FAQ management.
               </li>
-              <li>
-                For Admin: We built a dashboard to manage users, listing
+              <li class="problem-text">
+                <span class="text-color-blue font-weight-bold"> For Admin: </span> We built a dashboard to manage users, listing
                 inquiries, contact, and everything needed to keep a bird's eye
                 view on the website for smooth working.
               </li>
@@ -301,9 +338,9 @@
               Results
             </h1>
             
-            <p>
-              We increased listing creation by 10.1%, User acquisition by 5.6% &
-              new inquiries grew by 3% in one year. Maintaining the overall rating
+            <p class="problem-text" >
+              <span class="text-color-blue font-weight-bold"> We increased listing creation</span> by 10.1%, <span class="text-color-blue font-weight-bold">User acquisition </span> by 5.6% &
+              <span class="text-color-blue font-weight-bold"> new inquiries</span> grew by 3% in one year. Maintaining the overall rating
               of Five stars from the users & vendors.
             </p>
             <img src="{% static 'images/misc/media/results.png' %}" alt="results" class="img-fluid" />
@@ -311,10 +348,10 @@
               <h1 class="text-color-black mt-4 testimonial-font" style="font-size: 2.5rem; font-weight: 900">
                 Testimonial
               </h1>
-              <img src="{% static 'images/misc/media/quotes.png' %}" class="mt-4 img-fluid"
-                style="height: 40px; width: 50px" alt="quotes" />
+              <img src="{% static 'images/media/quotes.png' %}" class="img-quote mt-4 img-fluid"
+                style="height: 40px; width: 50px;" alt="quotes" />
             </div>
-            <p>
+            <p class="problem-text" style="color:  #828282 ;" >
               We are a team of people believing the Internet is the new town
               square. We are driven by technology & backed by data. we believe
               every business is unique, we build custom solutions to serve your
