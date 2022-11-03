@@ -1,4 +1,3 @@
-
 <style>
     .owl-dots{
         float: left;
@@ -69,6 +68,24 @@
                     <!-- <div class="arrow_prev slide  ">
                         <img src="../../media_files/media/Vector (5).png" alt="" class="carousel-control-prev-icon ms-5 me-4" >
                     </div> -->
+                    <style>
+                        .show-only-pc{
+                            display: none;
+                        }
+                        @media (max-width: 800px){
+                            .show-only-pc {
+                                        display: block;
+                                        display: none !important;
+                                }
+                                .container .slider {
+                                    animation: none;
+                                    white-space: nowrap;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                }
+                            }
+                    </style>
                     <div class="owl-carousel owl-theme grid-margi mb-0">
                         <!--TODO give link to whole carousel-->
                         {% for object in review %}
