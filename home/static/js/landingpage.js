@@ -18,7 +18,6 @@ function scrollFunction() {
 $('.owl-carousel').owlCarousel({
     items: 3,
     loop:true,
-    nav:false,
     dot:true,
     autoplay: true,
     nav: true,

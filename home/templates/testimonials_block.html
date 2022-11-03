@@ -46,7 +46,7 @@
     /* css for testimonial navigation */
     
     .owl-theme .owl-nav [class*='owl-']:hover {
-    /* background: #869791; */
+    background: none !important;
     color: #FFF;
     text-decoration: none;
 }
@@ -89,7 +89,7 @@
                     <div class="owl-carousel owl-theme grid-margi mb-0">
                         <!--TODO give link to whole carousel-->
                         {% for object in review %}
-                        <div class="card customer-cards bg-white" style=" width: 300px; height: 400px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);">
+                        <div class="card customer-cards bg-white" style="height: 400px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);">
                             <div class="card-body">
                                 <div class="text-center">
                                     <img src="{{object.project.logo.url}}" style="width: 150px; height: 80px;"alt="My Image">
