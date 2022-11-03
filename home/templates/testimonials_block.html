@@ -69,13 +69,18 @@
                         <img src="../../media_files/media/Vector (5).png" alt="" class="carousel-control-prev-icon ms-5 me-4" >
                     </div> -->
                     <style>
-                        .show-only-pc{
-                            display: none;
+                        .arrow_next{
+                           display: block;
+                        }
+                        .arrow_prev{
+                            display: block;
                         }
                         @media (max-width: 800px){
-                            .show-only-pc {
-                                        display: block;
-                                        display: none !important;
+                                .arrow_prev{
+                                    display: none;
+                                }
+                                .arrow_next{
+                                    display: none;
                                 }
                                 .container .slider {
                                     animation: none;
