@@ -22,6 +22,7 @@ $('.owl-carousel').owlCarousel({
     autoplay: true,
     nav: true,
     navText: [`<img src="../../media_files/media/Vector (5).png">`, `<img  src="../../media_files/media/Vector (4).png">`],
+    // navText: [`<img src="../../media_files/media/prev-arrow.png">`, `<img  src="../../media_files/media/next-arrow.png">`],
     slideTransition: 'linear',
     autoplayHoverPause: true,
     responsive:{
