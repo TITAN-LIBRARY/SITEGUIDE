@@ -23,10 +23,55 @@
 .owl-dots button{
     outline: none;
     border: none;
-    /* remove background color of button */
     background: none;
 
 }
+.owl-prev, .owl-next {
+        width: 15px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block !important;
+        border:0px solid black;
+    }
+    .owl-theme .owl-nav [class*='owl-'] {
+    color: #FFF;
+    font-size: 14px;
+    margin: 50px;
+    margin-top: 2;
+    padding: 4px 7px;
+    background: #D6D6D6;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
+}
+    .owl-prev { left: -20px; }
+    .owl-next { right: -20px; }
+
+    .owl-carousel .owl-stage-outer {
+    border: 80px solid #fff;
+    border-top: 0px solid #fff;
+    border-bottom: 30px solid #fff;
+    }
+    @media (max-width: 400px) {
+        .owl-carousel .owl-stage-outer {
+            border: 0px solid #fff;
+            border-top: 0px solid #fff;
+            border-bottom: 0px solid #fff;
+        }
+        .owl-next, .owl-prev{
+            position: relative;
+            top: 0;
+            transform: translateY(0);
+        }
+        .owl-dots{
+            position: relative;
+            top: -120px;
+            left:10px
+
+        }
+    }
 </style>
 <div class="content-wrapper pt-5">
     <div class="container">
