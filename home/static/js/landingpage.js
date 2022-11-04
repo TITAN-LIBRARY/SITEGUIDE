@@ -14,7 +14,7 @@ function scrollFunction() {
   }
 }
 
-// OWL-CAROUSAL
+// OWL-CAROUSAL for Testimonial
 $('.owl-carousel').owlCarousel({
     items: 3,
     loop:true,
@@ -25,18 +25,23 @@ $('.owl-carousel').owlCarousel({
     // navText: [`<img src="../../media_files/media/prev-arrow.png">`, `<img  src="../../media_files/media/next-arrow.png">`],
     slideTransition: 'linear',
     autoplayHoverPause: true,
+    // reduce width of the cards
     responsive:{
       0:{
           items:1
       },
-      600:{
+      400:{
           items:2
       },
-      1000:{
+      800:{
           items:3
       }
   }
 })
+
+
+
+
 
 // active class
 $('.owl-dot').click(function () {

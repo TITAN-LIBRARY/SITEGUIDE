@@ -72,8 +72,10 @@
 
         }
     }
+
 </style>
-<div class="content-wrapper pt-5">
+
+<div class="content-wrapper pt-5 show-only-pc">
     <div class="container">
         <section class="features-overview pt-4 " id="features-section" >
             <div class="content-header pt-3">
@@ -104,14 +106,16 @@
                         </div>
                     </div>
                     {% endfor %} -->
-                    <div class=" d-flex justify-content-around align-items-center">
+                    <!-- <div class=" d-flex justify-content-around align-items-center">
                         <div class="arrow_prev slide">
                             <img src="../../media_files/media/Vector (5).png" alt="" class="carousel-control-prev-icon ms-5 me-4" >
                         </div>
-                        <div class="container">
+                        <div class="container"> -->
 
-                            <section class="case-studies slider d-flex" style="gap:20px ;">
-                                {% for object in project %}
+                            <!-- <section class="case-studies slider d-flex" style="gap:20px ;"> -->
+                                <div class="owl-carousel  owl-theme grid-margin mb-0">
+                                    <!--TODO give link to whole carousel-->
+                    {% for object in project %}
                         <div class="" data-aos="zoom-in" style="height: 400px; width:297px;" >
                             <div class="card color-cards shadow p-0">
                                 <div class="card-body p-0">
@@ -142,25 +146,371 @@
                               <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                           </div> -->
-                        {% endfor %}
-                    
-                            </section>
-                    
+                          <!-- CODE FOR PHONE RESPONSIVENESS -->
+                          <!-- <section class="case-studies show-only-phone">
+                                <div class=" d-flex justify-content-around align-items-center">
+                                    <div class="container">
+            
+                                        <section class="case-studies slider d-flex" style="gap:20px ;">
+                                            {% for object in project %}
+                                    <div class="" data-aos="zoom-in" style="height: 400px; width:297px;" >
+                                        <div class="card color-cards shadow p-0">
+                                            <div class="card-body p-0">
+                                                <div class="bg-primary text-center card-contents p-0">
+                                                    <div class="card-image p-0">
+                                                        <img src="{{object.image.url}}" class="case-studies-card-img card-img-top" style="height: 232px;width: 297px;" alt="" >
+                                                    </div>
+                                                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                                                        <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
+                                                    </div>
+                                                </div>
+                                                <div class="card-details ps-3 pe-3 pt-4">
+                                                    <h4 class="m-0 pb-1">{{object.project_name}}</h4>
+                                                    <p class="text-wrap" >{{object.case_study}}</p>
+                                                </div>
+                                                <div class="d-flex flex-row pb-2 ps-3" style="border-radius: 0; gap: 4px;" >
+                                                    <a href="{{calendly_link}}" class="btn btn-info btn-lg me-md-2"> View Site</a>
+                                                    <a href="" class="btn btn-outline-secondary btn-lg ">Read Case Study</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                
+                                        </section>
+                                
+                                    </div>
+                                </div>
+                                <style>
+                                    .work-carousel-btn{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        margin-left: 20px;
+                                        margin-right: 20px;
+                                    }
+                                    @media (max-width: 600px) {
+                                        .work-carousel-btn{
+                                            display: flex;
+                                            justify-content: center;
+                                        }
+                                        .carousel-btn-dots{
+                                            display: none;
+                                        }
+                                    }
+                                </style>
+            
+                            <div class="work-carousel-btn">
+                                
+                                <div class="owl-dots carousel-btn-dots" style="margin-top: 50px;">
+                                    <button role="button" class="owl-dot active"><span></span></button>
+                                    <button role="button" class="owl-dot"><span></span></button>
+                                    <button role="button" class="owl-dot"><span></span></button>
+                                    <button role="button" class="owl-dot"><span></span></button>
+                                </div>
+                                
+            
+            
+                                <a href="./"><center class="mb-5 mt-5" 
+                                        style="
+                                        background-color: #F3F3FF;
+                                        border-color: #d9d9d9;
+                                        color: #1A27C9;
+                                        padding: 10px;
+                                        float:right;
+                                        padding: 12px 36px;
+                                        margin-top:12px;
+                                        justify-content: center;
+                                        align-items: center;        
+                                ">
+                          <span style="font-size: 18px">View all projects</span>
+                          <img src="{% static 'images/media/home-view-all-arrow.png' %}" style="color:#1A27C9" class="ml-2" alt="" />
+                                </center>
+                            </a>
                         </div>
-                        <div class="arrow_next slide">
-                            <img class="carousel-control-prev-icon ms-4 me-5" src="../../media_files/media/Vector (4).png" alt="" style="margin-right: 10px;">
-                        </div>
+                            
+                    
                     </div>
+                            
+                            
+                        </section>
+                    </section>-->
+                    <!-- show only mobile ends -->
+                          
+                        {% endfor %} 
+                        </div>
+                        
+                            <!-- </section> -->
+                    
+                        </div>
+                        <!-- <div class="arrow_next slide">
+                            <img class="carousel-control-prev-icon ms-4 me-5" src="../../media_files/media/Vector (4).png" alt="" style="margin-right: 10px;">
+                        </div> -->
+                    <!-- </div> -->
                     <!-- <center class="mb-5 mt-2" style="float: right">
                                    Yellow Button
                         <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
                     </center> -->
                     <style>
                         .work-carousel-btn{
-                            display: flex;
-                            justify-content: space-between;
+                            /* display: flex;
+                            justify-content: flex-end; */
                             margin-left: 20px;
-                            margin-right: 20px;
+                            margin-right: 80px;
+                        }
+                        @media (max-width: 600px) {
+                            .work-carousel-btn{
+                                display: flex;
+                                justify-content: center;
+                            }
+                            .carousel-btn-dots{
+                                display: none;
+                            }
+                        }
+                    </style>
+
+                <div class="work-carousel-btn">
+                    
+                    <!-- <div class="owl-dots carousel-btn-dots" style="margin-top: 50px;">
+                        <button role="button" class="owl-dot active"><span></span></button>
+                        <button role="button" class="owl-dot"><span></span></button>
+                        <button role="button" class="owl-dot"><span></span></button>
+                        <button role="button" class="owl-dot"><span></span></button>
+                    </div> -->
+                    
+
+
+                    <!-- <a href="./"><center class="mb-5 mt-5" 
+                            style="
+                            background-color: #F3F3FF;
+                            border-color: #d9d9d9;
+                            color: #1A27C9;
+                            padding: 10px;
+                            float:right;
+                            padding: 12px 36px;
+                            margin-top:12px;
+                            justify-content: center;
+                            align-items: center;        
+                    ">
+              <span style="font-size: 18px">View all projects</span>
+              <img src="{% static 'images/media/home-view-all-arrow.png' %}" style="color:#1A27C9" class="ml-2" alt="" />
+                    </center> -->
+                    <a href="./">
+                        <center id="testimonial-btn" style="background-color: #F3F3FF;
+                            border-color: #d9d9d9;
+                            color: #1A27C9;padding: 10px;
+                            float:right;
+                            justify-content: center;
+                            align-items: center; 
+                            position:relative;
+                            padding: 12px 36px;
+                            margin-top:10px; "
+                            class="bottom-btn show-only-pc">
+                                <span style="font-size: 18px">View all projects</span>
+                                <img alt="" class="ml-2" src="/static/images/media/home-view-all-arrow.png" style="color:#1A27C9">
+                        </center>
+                    </a>
+                </a>
+            </div>
+                
+        
+        </div>
+                
+                
+            </section>
+        </section>
+    </div>
+</div>
+
+
+<!-- show only mobile -->
+
+<div class="content-wrapper pt-5 show-only-mobile">
+    <div class="container">
+        <section class="features-overview pt-4 " id="features-section" >
+            <div class="content-header pt-3">
+                <h2 class="heading-title pb-2">Our Recent Works</h2>
+                <h6 class="section-subtitle text-muted">We craft custom websites and applications to transform your business</h6>
+            </div>
+            <section class="case-studies">
+                <!-- <div class="row grid-margin"> -->
+                    <!--TODO ADD LINK ON WHOLE DIV-->
+                    <!--        TODO ON hove blue text fix -->
+                    <!-- {% for object in project %}
+                    <div class="col-12 col-md-6 col-lg-6 stretch-card mb-3 mt-4 mb-lg-0" data-aos="zoom-in">
+                        <div class="card color-cards shadow p-0">
+                            <div class="card-body p-0">
+                                <div class="bg-primary text-center card-contents p-0">
+                                    <div class="card-image p-0">
+                                        <img src="{{object.image.url}}" class="case-studies-card-img" style="height: 300px;width: 100%" alt="" >
+                                    </div>
+                                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                                        <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
+                                    </div>
+                                </div>
+                                <div class="card-details text-center pt-4">
+                                    <h6 class="m-0 pb-1">{{object.project_name}}</h6>
+                                    <p>{{object.case_study}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %} -->
+                    <!-- <div class=" d-flex justify-content-around align-items-center">
+                        <div class="arrow_prev slide">
+                            <img src="../../media_files/media/Vector (5).png" alt="" class="carousel-control-prev-icon ms-5 me-4" >
+                        </div>
+                        <div class="container"> -->
+
+                            <!-- <section class="case-studies slider d-flex" style="gap:20px ;"> -->
+                                <section class="case-studies show-only-phone">
+                                    <div class=" d-flex justify-content-around align-items-center">
+                                        <div class="container">
+                
+                                            <section class="case-studies slider d-flex" style="gap:20px ;">
+                                                {% for object in project %}
+                                        <div class="" data-aos="zoom-in" style="height: 400px; width:297px;" >
+                                            <div class="card color-cards shadow p-0">
+                                                <div class="card-body p-0">
+                                                    <div class="bg-primary text-center card-contents p-0">
+                                                        <div class="card-image p-0">
+                                                            <img src="{{object.image.url}}" class="case-studies-card-img card-img-top" style="height: 232px;width: 297px;" alt="" >
+                                                        </div>
+                                                        <div class="card-desc-box d-flex align-items-center justify-content-around">
+                                                            <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-details ps-3 pe-3 pt-4">
+                                                        <h4 class="m-0 pb-1">{{object.project_name}}</h4>
+                                                        <p class="text-wrap" >{{object.case_study}}</p>
+                                                    </div>
+                                                    <div class="d-flex flex-row pb-2 ps-3" style="border-radius: 0; gap: 4px;" >
+                                                        <a href="{{calendly_link}}" class="btn btn-info btn-lg me-md-2"> View Site</a>
+                                                        <a href="" class="btn btn-outline-secondary btn-lg ">Read Case Study</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    
+                                            </section>
+                        <!-- <div class="card" style="width: 18rem; margin-right:3rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Strategy | Web Development | WordPress Development.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div> -->
+                          <!-- CODE FOR PHONE RESPONSIVENESS -->
+                          <!-- <section class="case-studies show-only-phone">
+                                <div class=" d-flex justify-content-around align-items-center">
+                                    <div class="container">
+            
+                                        <section class="case-studies slider d-flex" style="gap:20px ;">
+                                            {% for object in project %}
+                                    <div class="" data-aos="zoom-in" style="height: 400px; width:297px;" >
+                                        <div class="card color-cards shadow p-0">
+                                            <div class="card-body p-0">
+                                                <div class="bg-primary text-center card-contents p-0">
+                                                    <div class="card-image p-0">
+                                                        <img src="{{object.image.url}}" class="case-studies-card-img card-img-top" style="height: 232px;width: 297px;" alt="" >
+                                                    </div>
+                                                    <div class="card-desc-box d-flex align-items-center justify-content-around">
+                                                        <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
+                                                    </div>
+                                                </div>
+                                                <div class="card-details ps-3 pe-3 pt-4">
+                                                    <h4 class="m-0 pb-1">{{object.project_name}}</h4>
+                                                    <p class="text-wrap" >{{object.case_study}}</p>
+                                                </div>
+                                                <div class="d-flex flex-row pb-2 ps-3" style="border-radius: 0; gap: 4px;" >
+                                                    <a href="{{calendly_link}}" class="btn btn-info btn-lg me-md-2"> View Site</a>
+                                                    <a href="" class="btn btn-outline-secondary btn-lg ">Read Case Study</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                
+                                        </section>
+                                
+                                    </div>
+                                </div>
+                                <style>
+                                    .work-carousel-btn{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        margin-left: 20px;
+                                        margin-right: 20px;
+                                    }
+                                    @media (max-width: 600px) {
+                                        .work-carousel-btn{
+                                            display: flex;
+                                            justify-content: center;
+                                        }
+                                        .carousel-btn-dots{
+                                            display: none;
+                                        }
+                                    }
+                                </style>
+            
+                            <div class="work-carousel-btn">
+                                
+                                <div class="owl-dots carousel-btn-dots" style="margin-top: 50px;">
+                                    <button role="button" class="owl-dot active"><span></span></button>
+                                    <button role="button" class="owl-dot"><span></span></button>
+                                    <button role="button" class="owl-dot"><span></span></button>
+                                    <button role="button" class="owl-dot"><span></span></button>
+                                </div>
+                                
+            
+            
+                                <a href="./"><center class="mb-5 mt-5" 
+                                        style="
+                                        background-color: #F3F3FF;
+                                        border-color: #d9d9d9;
+                                        color: #1A27C9;
+                                        padding: 10px;
+                                        float:right;
+                                        padding: 12px 36px;
+                                        margin-top:12px;
+                                        justify-content: center;
+                                        align-items: center;        
+                                ">
+                          <span style="font-size: 18px">View all projects</span>
+                          <img src="{% static 'images/media/home-view-all-arrow.png' %}" style="color:#1A27C9" class="ml-2" alt="" />
+                                </center>
+                            </a>
+                        </div>
+                            
+                    
+                    </div>
+                            
+                            
+                        </section>
+                    </section>-->
+                    <!-- show only mobile ends -->
+                          
+                        
+                        </div>
+                        
+                            <!-- </section> -->
+                    
+                        </div>
+                        <!-- <div class="arrow_next slide">
+                            <img class="carousel-control-prev-icon ms-4 me-5" src="../../media_files/media/Vector (4).png" alt="" style="margin-right: 10px;">
+                        </div> -->
+                    <!-- </div> -->
+                    <!-- <center class="mb-5 mt-2" style="float: right">
+                                   Yellow Button
+                        <a href="{% url 'home:works' %}" class="btn btn-outline-info">View more</a>
+                    </center> -->
+                    <style>
+                        .work-carousel-btn{
+                            /* display: flex;
+                            justify-content: flex-end; */
+                            margin-left: 20px;
+                            margin-right: 80px;
                         }
                         @media (max-width: 600px) {
                             .work-carousel-btn{
@@ -210,3 +560,4 @@
         </section>
     </div>
 </div>
+
