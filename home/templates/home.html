@@ -64,18 +64,18 @@
       .responsive-hero-btn{
         margin: 0 auto;
       }
-      @media (max-width:390) {
-        .responsive-hero-btn{
-          margin-left: 40px;
-        }
-      }
-      @media (max-width: 400x) {
+
+
+      
+      @media (max-width: 400px) {
         .ps-5 {
           padding-left: 0!important;
         }
         .responsive-hero-btn{
-          
           left: -30;
+        }
+        .row{
+          text-align: center;
         }
       }
       @media (max-width: 990px) {
@@ -85,13 +85,23 @@
           gap: 10px;
         }
       }
+      @media (max-width:600px){
+        #hero-strategy-call{
+        margin-left: 0px !important;
+      }
+      .ps-5{
+        padding-left: 0px !important;
+      }
+      }
     </style>
     <div class="row">
       <div class="col-lg-6">
         <h1 class="mt-0 pt-0 ps-5" style="font-size: 48px;font-weight:900; "><b>We grow your business with <span class="text-color-blue">Custom Website & Application</span></b></h1>
         <p class="lead ps-5">Over 25+ sites built & 5 <span style="color:#FDCC0D;">&#9733 </span> rating on google</p>
-        <div class="d-grid gap-2 d-md-flex home-btn justify-content-md-start mb-4 responsive-hero-btn">
-          <a href="{{calendly_link}}" class="btn btn-info btn-lg ms-5 me-md-2 responsive-hero-btn" style="height: 52px;"> Book a Strategy Call</a>
+        <!-- <div class="d-grid gap-2 d-md-flex home-btn justify-content-md-start mb-4 responsive-hero-btn"> -->
+          <div class="gap-2 d-md-flex home-btn justify-content-md-start mb-4 responsive-hero-btn">
+          <a href="{{calendly_link}}" class="btn btn-info btn-lg ms-5 me-md-2 responsive-hero-btn" id="hero-strategy-call" style=""> Book a Strategy Call</a>
+          <!-- /* height: 52px; */margin-left: 0 !important; -->
           <a href="" class="btn btn-outline-secondary btn-lg ms-1 responsive-hero-btn">See our work</a>
         </div>
       </div>
