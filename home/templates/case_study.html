@@ -158,6 +158,9 @@
     .ps-5{
       padding-left: 0 !important;
     }
+    .show-only-pc {
+      display: none;
+    }
   }
   #sticky-in-desktop {
     position:sticky;
@@ -260,8 +263,7 @@
       <br><br>
       <div class="mt-5" style="overflow: hidden;">
         <div class="row">
-          <!-- <div class="col-lg-8 col-sm-12 pe-5 "> -->
-            <div class=" pe-5 ">
+          <div class="col-lg-8 col-sm-12 pe-5 ">
             <h1 class="text-color-black mt-4 testimonial-font" style="font-size: 40px; font-weight: 900; padding-top: 42px;">
               Count that matters
             </h1>
@@ -370,107 +372,9 @@
             </p>
             <p style="margin-bottom: 80px;">Founder, Naman Foods</p>
           </div>
-         <div class="pe-5 mt-5 mb-3" >
-          <style>
-            .main-cta{
-                display: flex;
-                background-color: #1A27C9;
-                color: #fff;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: space-around;
-            }
-            .btn-cta button{
-               border-radius: 5px;
-               width: 59px;
-               height: 59px;
-               background: none;
-                color: inherit;
-                border: none;
-                padding: 0;
-                font: inherit;
-                cursor: pointer;
-                outline: inherit;
-               margin: 60px;
-               margin-top: 50px;
-            }
-            .content-btn-cta{
-               display: flex;
-               justify-content: space-around;
-               text-align: center;
-            }
-        
-            .content-cta button a{
-                text-decoration: none;
-                color:#1A27C9;
-                font-size: 1.5rem;
-            }
-            .content-cta{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                margin-left: 2.4rem;
-                margin-right: 2rem;
-            }
-        
-            .content-cta p{
-                font-size: 1.1rem;
-            }
-            .content-cta h1{
-                font-size: 2.4rem;
-            }
-        
-            .img-cta img{
-                width: 19rem;
-                height:16rem;
-                position: relative;
-                bottom: 80;
-                margin:20px;
-                padding-bottom: 20px;
-            }
-            @media (max-width: 990px){
-                .content-cta{
-                   align-items: center;
-                }
-            }
-            
-            .avoid-overlap{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-        
-        
-        </style>
-        
-          <div class="main-cta">
-            <div style="position: relative; width: 20rem; height: 8rem;">
-                <div class="img-cta" style="position: absolute; top: -30px;">
-                    <!-- <img src="{% static 'images/media/image_16.png' %}" > -->
-                    <!-- <img src="../static/images/media/pc-home-img.png" > -->
-                    <img src="{% static 'images/misc/media/image 18.png' %}" alt="" style="width: 300px;">
-            </div>
-            </div>
-            <div class="content-btn-cta" style="display: flex; flex-wrap: wrap;">
-            <div class="content-cta">
-                <h1>Click to book a strategy call</h1>
-                <p>Frequently asked questions ordered by Popularity.</p>
-                
-
-            </div>
-
-            <div class="btn-cta">
-                <button>
-                    <a href="{{calendly_link}}" target="_blank"><img src="{% static 'images/media/Vector.png' %}" ></a>
-                </button>
-            </div> 
-            </div>                        
-        </div>          
-            
-           <!-- <div id="sticky-in-desktop ">
-            <img src="{% static 'images/misc/media/image 18.png' %}" alt="" style="width: 300px;">
+          <div class="col-lg-4 col-sm-12 container-small" style="padding-left:2rem;" >
+           <div id="sticky-in-desktop ">
+            <img src="{% static 'images/misc/media/image 18.png' %}" alt="" style="width: 300px;"
               class="rounded mx-auto d-block" />
             <div style="background-color: #1a27c9; 
                 margin-top: -70px; 
@@ -504,13 +408,14 @@
               <img src=" {% static 'images/media/arrow-gif 1.png' %}" class="img-arrow">
               </div>
             </div>
-            </div>-->
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="show-only-pc">
+      {% include 'last_cta_block.html' %}
+    </div>
   </div>
-
 </div>
 {% endblock %}
-
