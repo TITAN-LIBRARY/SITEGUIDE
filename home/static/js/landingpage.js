@@ -25,7 +25,6 @@ $('.owl-carousel').owlCarousel({
     // navText: [`<img src="../../media_files/media/prev-arrow.png">`, `<img  src="../../media_files/media/next-arrow.png">`],
     slideTransition: 'linear',
     autoplayHoverPause: true,
-    // reduce width of the cards
     responsive:{
       0:{
           items:1
