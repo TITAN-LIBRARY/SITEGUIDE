@@ -706,16 +706,38 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
     <script>
-        $(document).ready(function () {
+        // $(document).ready(function () {
+        //     $('.customer-logos').slick({
+        //         slidesToShow: 5,
+        //         slidesToScroll: 4,
+        //         autoplay: true,
+        //         autoplaySpeed: 2000,
+        //         nextArrow:'.arrow_prev',
+        //         prevArrow:'.arrow_next',
+        //         // dots: true
+        //     });
+        // });
+        $(document).ready(function(){
             $('.customer-logos').slick({
-                slidesToShow: 5,
-                slidesToScroll: 0,
+                slidesToShow: 6,
+                slidesToScroll: 1,
                 autoplay: true,
-                autoplaySpeed: 2000,
-                nextArrow:'.arrow_prev',
-                prevArrow:'.arrow_next',
-                // dots: true
-            });
+                autoplaySpeed: 1000,
+                arrows: true,
+                dots: false,
+                pauseOnHover: false,
+                responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4
+                }
+                }, {
+                breakpoint: 520,
+                settings: {
+                    slidesToShow: 3
+                }
+                }]
+            });     
         });
 
     </script>

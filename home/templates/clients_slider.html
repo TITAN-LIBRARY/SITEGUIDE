@@ -48,7 +48,7 @@
     <div class="arrow_prev slide">
         <img src="../../media_files/media/Vector (5).png" class="carousel-control-prev-icon ms-5 me-4 show-only-pc " alt="">
     </div>
-    <div class="container">
+    <!-- <div class="container">
 
         <section class="customer-logos slider px-4">
             {% for object in brands %}
@@ -61,9 +61,36 @@
 
         </section>
 
-    </div>
+    </div> -->
+
+    <!-- main html -->
+    <div class="container mt-1" >
+        <div class="row align-items-center" style="box-sizing: border-box;">
+            <div class="container rounded show-only-pc p-2" style="margin: -1rem;background-color:#fff; ">
+                <div class="slider">
+                    <div class="logos p-2 slide" style="padding-right:5rem;">
+                        {% for object in brands %}
+                        <img src="{{object.logo.url}}" style="padding: 0.2rem 5rem 0.2rem 0;" height="50"/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <br class="show-only-mobile">
+            <div class="container rounded show-only-mobile" style="background-color:#fff;" >
+                <div class="slider-mobile">
+                    <div class="logo.urls mt-4 mb-4">
+                        {% for object in brands %}
+                        <img src="{{object.logo.url}}" style="padding:0.2rem 2.5em 0.2rem 2.5rem;" height="90"/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
     <div class="arrow_next slide">
         <img src="../../media_files/media/Vector (4).png" class="carousel-control-prev-icon ms-4 me-5 show-only-pc " alt="">
     </div>
 </div> 
+
+
 
