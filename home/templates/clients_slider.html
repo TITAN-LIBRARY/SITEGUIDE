@@ -44,9 +44,10 @@
         margin: auto;
     }
 </style>
-<div class="container d-flex  justify-content-around align-items-center">
-    <div class="arrow_prev slide">
-        <img src="../../media_files/media/Vector (5).png" class="carousel-control-prev-icon ms-5 me-4 show-only-pc " alt="">
+
+<div class=" container d-flex justify-content-around align-items-center">
+    <div class="arrow_prev slide ms-5">
+        <img src="../../media_files/media/Vector (5).png" class="carousel-control-prev-icon ms-5 me-4" alt="">
     </div>
     <!-- <div class="container">
 
@@ -66,9 +67,9 @@
     <!-- main html -->
     <div class="container mt-1" >
         <div class="row align-items-center" style="box-sizing: border-box;">
-            <div class="container rounded show-only-pc p-2" style="margin: -1rem;background-color:#fff; ">
+            <div class="container rounded p-2 show-only-pc" style="margin: 1rem;background-color:#fff; ">
                 <div class="slider">
-                    <div class="logos p-2 slide" style="padding-right:5rem;">
+                    <div class="logos p-2 slide slick-slide" style="padding-right:5rem;">
                         {% for object in brands %}
                         <img src="{{object.logo.url}}" style="padding: 0.2rem 5rem 0.2rem 0;" height="50"/>
                         {% endfor %}
@@ -86,9 +87,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="arrow_next slide">
-        <img src="../../media_files/media/Vector (4).png" class="carousel-control-prev-icon ms-4 me-5 show-only-pc " alt="">
+    </div> 
+    <div class="arrow_next slide me-5 ">
+        <img src="../../media_files/media/Vector (4).png" class="carousel-control-prev-icon ms-4 me-5 " alt="">
     </div>
 </div> 
 
