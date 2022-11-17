@@ -1,12 +1,95 @@
-<div class="p-3 pt-2 mb-2" style="align-items: center;justify-content: center;background-color:#f7f7f7">
+<style>
+    .techblock-whole,.tech-block-feat{
+        display: flex;
+    }
+    .tech-tick{
+        width: 29.35px;
+        height: 29.35px;
+    }
+    .tech-block-feat{
+        margin-top: 10px;
+    }
+
+    .second-header{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.625rem;
+        line-height: 150%;
+        text-align: center;
+        width: 519px;
+        margin: 0 auto;
+    }
+    .tech-block-feat-all{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 22px;
+    }
+    .tech-block-feat p{
+        height: 20px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: flex-start;
+        text-align: start;
+        flex-wrap: wrap;
+        order: 1;
+        flex-grow: 0;
+        padding-left: 20px;
+        min-width: fit-content;
+    }
+
+    @media (max-width: 1000px) {
+        .techblock-whole{
+        flex-wrap: wrap;
+    }
+    .tech-block-feat-all{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+    .tech-block-feat{
+        margin: 20px;
+    }
+    }
+</style>
+
+<div class="content-wrapper">
+<div class="container pt-5" style="align-items: center;justify-content: center;">
     <center>
-        <h3 class="heading-title pb-2">Technologies  <span class="text-color-blue">we love</span></h3>
+        <!-- <h3 class="heading-title pb-2">Technologies  <span class="text-color-blue">we love</span></h3>
         <h6 class="section-subtitle text-muted">We development is streamlined, fast & user-friendly that meets customer's needs.</h6>
-        <br>
+        <br> -->
+
+        <h3 class="text-color-blue mb-5">Web App Development</h3>
+
+        <div class="techblock-whole">
+            <div class="second-header">We build responsive web apps for all browsers and devices</div>
+
+            <div class="tech-block-feat-all">
+                <div class="tech-block-feat">
+                    <img src="../static/images/media/blue_tick.png" class="tech-tick" alt="">
+                    <p>Usability mixed with beautiful designs</p>
+                </div>
+                <div class="tech-block-feat">
+                    <img src="../static/images/media/blue_tick.png" class="tech-tick">
+                    <p>Complex workflows, interacations and visualizations</p>
+                </div>
+                <div class="tech-block-feat">
+                    <img src="../static/images/media/blue_tick.png" class="tech-tick">
+                    <p>Web-based systems that scale</p>
+                </div>
+            </div>
+        </div>
     </center>
     <div class="row align-items-center" >
         <!-- <h6 class="text-center">Technologies we love</h6>-->
-        <div class="container rounded show-only-pc" style="background-color:#f7f7f7; ">
+        <div class="container rounded show-only-pc" style="margin-top: 40px;">
             <div class="slider">
                 <div class="logos" style="padding-right:5rem;">
                     {% for object in technology %}
@@ -20,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <div class="container rounded show-only-mobile" style="margin: 1rem;padding:2rem;background-color:#f7f7f7;">
+        <div class="container rounded show-only-mobile" style="padding:2rem; margin-top: 20px;">
             <div class="slider-mobile">
                 <div class="logos">
                     {% for object in technology %}
@@ -30,4 +113,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

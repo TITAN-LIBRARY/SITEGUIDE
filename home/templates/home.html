@@ -13,6 +13,20 @@
   .div-container-start-proj{
     padding-left: 1rem;
   }
+  .img-arrow{
+    width: 10rem;
+    position: relative;
+    top: -2.5rem;
+    left: -3rem;
+  }
+  @media (min-width: 600px) and (max-width: 992px){
+    .img-arrow{
+      visibility: hidden;
+    }
+    .div-container-start-proj{
+      padding-left: 1rem;
+    }
+  }
 </style>
 
 <!-- <div style="show-only-pc">
@@ -187,7 +201,7 @@
   {% include "last_cta_block.html" %}
 </div>
 <div class="show-only-mobile">
-  <div class="col-lg-4 col-sm-12 container-small" style="padding-left:2rem;" >
+  <div class="col-lg-4 col-sm-12 container-small" style="" >
     <div id="sticky-in-desktop ">
      <img src="{% static 'images/misc/media/image 18.png' %}" alt="" style="width: 300px;"
        class="rounded mx-auto d-block" />
@@ -200,7 +214,7 @@
          justify-content: center;
          padding-top: 4rem;
          min-width: 250px;
-         " class="container-small p-xs-2 position-sticky">
+         " class="container-small p-xs-2">
        <h1 style="padding-top: 70px; color: #fff; font-size: 24px" class="text-center">
          Start the project now!
        </h1>
