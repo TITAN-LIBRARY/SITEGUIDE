@@ -97,15 +97,17 @@
                         <!--TODO give link to whole carousel-->
                         {% for object in review %}
                         <!-- <div class="card customer-cards bg-white" style="height: 430px; width:290px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);"> -->
-                            <div class="card card-class customer-cards bg-white" style=" width:340px; height: 430px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); margin-right:2rem;">
+                            <div class="card card-class customer-cards bg-white" style=" width:340px; height: 430px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); margin-right:2rem; border-radius:0px !important;">
                             <div class="card-body">
                                 <div class="text-center">
                                     <img src="{{object.project.logo.url}}" style="width: 100px; height: 80px;"alt="My Image">
                                     
                                     <p class="m-0 py-3 text-muted">{{object.review}}</p>
-                                    <div class="content-divider m-auto" style="background-color:#000"></div>
-                                    <h6 class="card-title pt-3">{{object.name}}</h6>
-                                    <h6 class="customer-designation text-muted m-0">{{object.position}} {{object.project.project_name}}</h6>
+                                    <div style="text-align: left;" >
+                                        <div class="content-divider m-auto" style="background-color:#000;"></div>
+                                    </div>
+                                    <h6 class="card-title pt-3" style="text-align: left;" >{{object.name}}</h6> 
+                                    <h6 class="customer-designation text-muted m-0" style="text-align: left;"  >{{object.position}} {{object.project.project_name}}</h6>
                                     <!--                    <a href="{{object.project.website}}">View {{object.project.project_name}}</a>-->
                                 </div>
                             </div>
