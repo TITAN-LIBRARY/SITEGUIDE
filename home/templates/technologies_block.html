@@ -1,3 +1,4 @@
+{% load static %}
 <style>
     .techblock-whole,.tech-block-feat{
         display: flex;
@@ -14,11 +15,12 @@
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 700;
-        font-size: 2.625rem;
+        font-size: 2.25rem;
         line-height: 150%;
         text-align: center;
         width: 519px;
         margin: 0 auto;
+        margin-top: 20px;
     }
     .tech-block-feat-all{
         display: flex;
@@ -60,12 +62,63 @@
 </style>
 
 <div class="content-wrapper">
-<div class="container pt-5" style="align-items: center;justify-content: center;">
-    <center>
-        <!-- <h3 class="heading-title pb-2">Technologies  <span class="text-color-blue">we love</span></h3>
-        <h6 class="section-subtitle text-muted">We development is streamlined, fast & user-friendly that meets customer's needs.</h6>
-        <br> -->
+    <!-- new one -->
+    <div class="container pt-5" style="align-items: center;justify-content: center; background-color: #000C79;">
+        <center>
+            <h3 class="mb-5" style="color:#64A2FF;">Web App Development</h3>
+    
+            <div class="techblock-whole">
+                <div class="second-header" style="color: #fff;" >We build responsive web apps for all browsers and devices</div>
+    
+                <div class="tech-block-feat-all">
+                    <div class="tech-block-feat">
+                        <img src="{% static 'images/media/white-tick.png' %}" class="tech-tick" style="" alt="" >
+                        <p style="color:#FFFFFF">Usability mixed with beautiful designs</p>
+                    </div>
+                    <div class="tech-block-feat">
+                        <img src="{% static 'images/media/white-tick.png' %}" class="tech-tick">
+                        <p style="color:#FFFFFF">Complex workflows, interacations and visualizations</p>
+                    </div>
+                    <div class="tech-block-feat">
+                        <img src="{% static 'images/media/white-tick.png' %}" class="tech-tick">
+                        <p style="color:#FFFFFF">Web-based systems that scale</p>
+                    </div>
+                </div>
+            </div>
+        </center>
+        <div class="row align-items-center" >
+            <div class="container rounded show-only-pc" style="margin-top: 40px;">
+                <div class="slider">
+                    <div class="logos" style="padding-right:5rem;">
+                        {% for object in technology %}
+                        <img src="{{object.logo}}" style="padding-right:5rem;"/>
+                        {% endfor %}
+                    </div>
+                    <div class="logos">
+                        {% for object in technology %}
+                        <img src="{{object.logo}}" style="padding-right:2.5em;padding-left:2.5rem;"/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="container rounded show-only-mobile" style="padding:2rem; margin-top: 20px; background-color: #000C79;">
+                <div class="slider-mobile">
+                    <div class="logos">
+                        {% for object in technology %}
+                        <img src="{{object.logo}}" style="padding:0 2.5rem;" height="50"/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+
+
+
+    <!-- old one -->
+<!-- <div class="container pt-5" style="align-items: center;justify-content: center;">
+    <center>
         <h3 class="text-color-blue mb-5">Web App Development</h3>
 
         <div class="techblock-whole">
@@ -88,7 +141,6 @@
         </div>
     </center>
     <div class="row align-items-center" >
-        <!-- <h6 class="text-center">Technologies we love</h6>-->
         <div class="container rounded show-only-pc" style="margin-top: 40px;">
             <div class="slider">
                 <div class="logos" style="padding-right:5rem;">
@@ -113,5 +165,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 </div>
