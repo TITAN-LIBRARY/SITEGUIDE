@@ -8752,7 +8752,7 @@ body.sidebar-open:before {
 }
 .case-studies .color-cards:hover .card-details,
 .case-studies .color-cards:hover .card-details p {
-  color: rgba(0, 51, 204, 0.8);
+  /* color: rgba(0, 51, 204, 0.8); */
 }
 .case-studies .color-cards:hover .card-desc-box {
   opacity: 1;
