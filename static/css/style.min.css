@@ -8752,7 +8752,7 @@ body.sidebar-open:before {
 }
 .case-studies .color-cards:hover .card-details,
 .case-studies .color-cards:hover .card-details p {
-  color: rgba(0, 51, 204, 0.8);
+  /* color: rgba(0, 51, 204, 0.8); */
 }
 .case-studies .color-cards:hover .card-desc-box {
   opacity: 1;
@@ -8947,7 +8947,7 @@ footer a:hover {
     height: 100vh;
     padding: 50px 0;
     width: 250px;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: transform 0.25s ease-in-out;
   }
   .navbar .navbar-menu-wrapper.navbar-collapse.show {

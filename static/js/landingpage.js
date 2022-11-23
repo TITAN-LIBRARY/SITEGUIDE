@@ -14,13 +14,15 @@ function scrollFunction() {
   }
 }
 
-// OWL-CAROUSAL
+// OWL-CAROUSAL for Testimonial
 $('.owl-carousel').owlCarousel({
     items: 3,
     loop:true,
-    nav:false,
     dot:true,
     autoplay: true,
+    nav: true,
+    navText: [`<img src="../../media_files/media/Vector (5).png">`, `<img  src="../../media_files/media/Vector (4).png">`],
+    // navText: [`<img src="../../media_files/media/prev-arrow.png">`, `<img  src="../../media_files/media/next-arrow.png">`],
     slideTransition: 'linear',
     autoplayHoverPause: true,
     responsive:{
@@ -30,11 +32,15 @@ $('.owl-carousel').owlCarousel({
       600:{
           items:2
       },
-      1000:{
+      1300:{
           items:3
       }
   }
 })
+
+
+
+
 
 // active class
 $('.owl-dot').click(function () {
