@@ -510,19 +510,21 @@
                         <span class="mdi mdi-menu navbar-toggler-icon" style="color:#000;"></span>
                     </button>
                 </div>
-                <div class="collapse navbar-collapse navbar-menu-wrapper p-0" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse navbar-menu-wrapper p-0" id="navbarSupportedContent" style="width: 100%;">
+                    <div class="d-flex align-items-center justify-content-between pl-3 mt-4 mb-4">
+                        <div class="navbar-collapse-logo d-flex ">
+                            <a href="/"><img src="{% static 'images/logo/SG-logo.png'%}" 
+                            height="50px"
+                                    alt=""></a>
+                                    <h6 style="padding:0.45rem 0rem 0 0.5rem;font-size:0.9rem;">SiteGuide</h6>
+                        </div>
+                        <button class="navbar-toggler close-button" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+                            <span class="mdi mdi-close" style="margin-right: 2rem;"></span>
+                        </button>
+                    </div>
                     <ul class="navbar-nav align-items-lg-center align-items-start">
-                        <li class="d-flex align-items-center justify-content-between pl-3">
-                            <div class="navbar-collapse-logo ">
-                                <a href="/"><img src="{% static 'images/logo/logo-black.png'%}" height="50px"
-                                        alt=""></a>
-                            </div>
-                            <button class="navbar-toggler close-button" type="button" data-toggle="collapse"
-                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="mdi mdi-close navbar-toggler-icon" style="padding-left:5em;"></span>
-                            </button>
-                        </li>
                         <li class="nav-item smallFont">
                             <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;"
                                 href="{% url 'home:home' %}"><span
