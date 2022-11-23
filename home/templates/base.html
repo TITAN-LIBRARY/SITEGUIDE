@@ -318,6 +318,7 @@
         .btn-info {
             background-color: #1A27C9;
             border-radius: 0px !important;
+            border-color: #1A27C9 !important;
             color: #fff;
         }
 
@@ -433,7 +434,7 @@
         <nav class="show-only-pc navbar navbar-expand-lg p-3 " id="navbar-pc">
             <div class="container" style="box-sizing:content-box;overflow:visible">
                 <div class="navbar-brand-wrapper d-flex w-100" style="margin-left:5em;z-index:1000;">
-                    <a href="/"><img src="{{logo}}" style="height: 60px;" alt=""></a>
+                    <a href="/"><img src="{{logo}}" style="width: 50px; height: 50px;" alt=""></a>
                     <h6 style="padding:0.75rem 0rem 0 0.5rem;font-size:1.0rem;font-size:1.75rem;"
                         class="text-color-blue">SiteGuide</h6>
                 </div>
@@ -490,7 +491,7 @@
                                     class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></a>
                         </li>
                         <!--          TODO add help text on click -->
-                        <li class="nav-item btn-contact-us pl-4 pl-lg-0" style="margin:0 5rem 0 1rem;">
+                        <li class="nav-item btn-contact-us pl-4 pl-lg-0" style="margin:0 5rem 0 1rem; ">
                             <a href="{{calendly_link}}" class="btn btn-info small-btn">
                                 Book a Strategy Call
                             </a>
