@@ -8880,7 +8880,6 @@ footer a:hover {
 }
 .owl-carousel .owl-item img {
   width: auto;
-  margin: 0 auto;
 }
 .owl-item:nth-child(odd) .content-divider {
   background-color: #000;
