@@ -61,6 +61,17 @@
         }
     }
 
+    .client-slide{
+        filter: gray;
+        -webkit-filter: grayscale(100%);
+    }
+    .client-slide:hover{
+        filter: none;
+        -webkit-filter: grayscale(0%);
+        animation-play-state: paused;
+        cursor: pointer;
+    }
+
 </style>
 
 <div class=" container d-flex justify-content-around align-items-center">
@@ -86,10 +97,10 @@
     <div class="container mt-1" >
         <div class="row align-items-center" style="box-sizing: border-box;">
             <div class="container rounded p-2 show-only-pc" style="margin: 1rem;background-color:#fff; ">
-                <div class="slider">
-                    <div class="logos p-2 slide slick-slide" style="padding-right:5rem;">
+                <div class="slider client-slide">
+                    <div class="logos p-2 slide" style="padding-right:5rem;">
                         {% for object in brands %}
-                        <img src="{{object.logo.url}}" style="padding: 0.2rem 5rem 0.2rem 0;" height="50"/>
+                        <img src="{{object.logo.url}}" class="client-slide" style="padding: 0.2rem 5rem 0.2rem 0;" height="50"/>
                         {% endfor %}
                     </div>
                 </div>
@@ -99,7 +110,7 @@
                 <div class="slider-mobile">
                     <div class="logo.urls mt-4 mb-4 mob-slide">
                         {% for object in brands %}
-                        <img src="{{object.logo.url}}" style="padding:0.2rem 2.5em 0.2rem 2.5rem;" height="90"/>
+                        <img src="{{object.logo.url}}" style="padding:0.2rem 2.5em 0.2rem 2.5rem;" height="50"/>
                         {% endfor %}
                     </div>
                 </div>
