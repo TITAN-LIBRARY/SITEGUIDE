@@ -108,16 +108,21 @@
                         <img src="{{object.logo}}" style="padding:0 2.5rem;" height="50"/>
                         {% endfor %}
                     </div>
+                    <div class="logos">
+                        {% for object in technology %}
+                        <img src="{{object.logo}}" style="padding:0 2.5rem;" height="50"/>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 
 
 
     <!-- old one -->
-<!-- <div class="container pt-5" style="align-items: center;justify-content: center;">
+<div class="container pt-5" style="align-items: center;justify-content: center;">
     <center>
         <h3 class="text-color-blue mb-5">Web App Development</h3>
 
@@ -143,14 +148,14 @@
     <div class="row align-items-center" >
         <div class="container rounded show-only-pc" style="margin-top: 40px;">
             <div class="slider">
-                <div class="logos" style="padding-right:5rem;">
+                <div class="logos" style="padding-right:0;">
                     {% for object in technology %}
                     <img src="{{object.logo}}" style="padding-right:5rem;" class="image-greyscale"/>
                     {% endfor %}
                 </div>
-                <div class="logos">
+                <div class="logos" style="margin-left: 0 ;" >
                     {% for object in technology %}
-                    <img src="{{object.logo}}" style="padding-right:2.5em;padding-left:2.5rem;" class="image-greyscale"/>
+                    <img src="{{object.logo}}" style="padding-right:2.5rem;padding-left:2.5rem;" class="image-greyscale"/>
                     {% endfor %}
                 </div>
             </div>
@@ -159,11 +164,18 @@
             <div class="slider-mobile">
                 <div class="logos">
                     {% for object in technology %}
-                    <img src="{{object.logo}}" style="padding:0 2.5rem;" height="50"/>
+                    <img src="{{object.logo}}" style="padding:0 0;" height="50"/>
+                    {% endfor %}
+                </div>
+                <div class="logos">
+                    {% for object in technology %}
+                    <img src="{{object.logo}}" style="padding:0 0;" height="50"/>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </div>
-</div> -->
 </div>
+
+
+

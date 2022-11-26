@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fb92440211.js" crossorigin="anonymous"></script>
 
     <style>
         body,html {
@@ -516,8 +517,9 @@
                                         ">SiteGuide</h6>
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="mdi mdi-menu navbar-toggler-icon" style="color:#000;"></span>
+                        aria-expanded="false" aria-label="Toggle navigation" style="border: 1px solid #fff;" >
+                        <span class="mdi mdi-menu md-48" style=" width:120px; color:#000; font-weight:500; "></span>
+                        <!-- <i class="fa-solid fa-bars"></i> -->
                     </button>
                 </div>
                 <div class="collapse navbar-collapse navbar-menu-wrapper p-0" id="navbarSupportedContent" style="width: 100%;">
@@ -544,7 +546,7 @@
 
                             <ul class="navbar-nav align-items-lg-center align-items-start">
                                 <li class="nav-item smallFont">
-                                    <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;"
+                                    <a class="nav-link" style="font-size:1.2rem; color:#000;color:#555;"
                                         href="{% url 'home:home' %}"><span
                                             class="color-hover {% if '/' == request.path %}text-color-blue{% endif %}">Home</span></a>
                                 </li>
@@ -552,16 +554,16 @@
                                 <!--            <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;" href="{% url 'home:services' %}"><span class="color-hover {% if 'services' in request.path %}text-color-blue{% endif %}">Services</span></a>-->
                                 <!--          </li>-->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" style="font-size:1.1rem; color:#000;" role="button"><span
+                                    <a class="nav-link" style="font-size:1.1rem; color:#555;" role="button"><span
                                             class="color-hover dropdown-toggle {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" style="font-size:1.1rem; color:#000;"
+                                        <li><a class="dropdown-item" style="font-size:1.1rem; color:#555;"
                                                 href="{% url 'home:services' %}"><span
-                                                    class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
+                                                    class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Websites</span></a>
                                         </li>
-                                        <li><a class="dropdown-item" style="font-size:1.1rem; color:#000;"
+                                        <li><a class="dropdown-item" style="font-size:1.1rem; color:#555;"
                                                 href="{% url 'home:services' %}"><span
-                                                    class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Services</span></a>
+                                                    class="color-hover {% if 'services' in  request.path %}text-color-blue{% endif %}">Applications</span></a>
                                         </li>
                                         <!--                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
                                         <!--                <li><hr class="dropdown-divider"></li>-->
@@ -569,19 +571,19 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;"
+                                    <a class="nav-link" style="font-size:1.2rem; color:#555;"
                                         href="{% url 'home:works' %}"><span
                                             class="color-hover {% if 'works' in request.path %}text-color-blue{% endif %}">Works</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="font-size:1.2rem; color:#000;color:black;"
+                                    <a class="nav-link" style="font-size:1.2rem; color:#555;"
                                         href="{% url 'home:testimonials' %}"><span
                                             class="color-hover {% if 'testimonials' in request.path %}text-color-blue{% endif %}">Testimonials</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" style="font-size:1.2rem;color:black;"
+                                    <a class="nav-link" style="font-size:1.2rem;color:#555;"
                                         href="{% url 'home:contact' %}"><span
-                                            class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact</span></a>
+                                            class="color-hover {% if 'contact' in request.path %}text-color-blue{% endif %}">Contact us</span></a>
                                 </li>
                                 <!--          TODO add help text on click -->
                                 <li class="nav-item pl-4 pl-lg-0 pt-3">
