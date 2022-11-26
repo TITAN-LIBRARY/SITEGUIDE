@@ -20,6 +20,7 @@ $('.owl-carousel').owlCarousel({
     loop:true,
     dot:true,
     autoplay: true,
+    autoWidth:true,
     nav: true,
     navText: [`<img src="../../media_files/media/Vector (5).png">`, `<img  src="../../media_files/media/Vector (4).png">`],
     // navText: [`<img src="../../media_files/media/prev-arrow.png">`, `<img  src="../../media_files/media/next-arrow.png">`],
@@ -32,7 +33,7 @@ $('.owl-carousel').owlCarousel({
       600:{
           items:2
       },
-      1300:{
+      1000:{
           items:3
       }
   }

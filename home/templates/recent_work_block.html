@@ -86,12 +86,12 @@
                                 <div class="owl-carousel  owl-theme grid-margin mb-0">
                                     <!--TODO give link to whole carousel-->
                     {% for object in project %}
-                        <div class="" data-aos="zoom-in" style="height: 400px; width:297px;  " >
+                        <div class="" data-aos="zoom-in" style="height: 400px; width:auto; margin: 10px;  " >
                             <div class="card color-cards p-0" style="border-radius:0px !important; box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.15); ">
                                 <div class="card-body p-0">
                                     <div class="bg-primary text-center card-contents p-0">
                                         <div class="card-image p-0">
-                                            <img src="{{object.image.url}}" class="case-studies-card-img card-img-top" style="height: 232px;width: 297px;" alt="" >
+                                            <img src="{{object.image.url}}" class="case-studies-card-img card-img-top" style="height: 232px;width: auto; margin: auto;" alt="" >
                                         </div>
                                         <div class="card-desc-box d-flex align-items-center justify-content-around">
                                             <a class="text-white" href={{object.website}} target="_blank">Visit {{object.website}}</a>
@@ -208,7 +208,24 @@
                           
                         {% endfor %} 
                         </div>
-                        
+                        <div style="margin-top: 2.5rem;">
+                            <a href="./">
+                                <center id="testimonial-btn" style="background-color: #F3F3FF;
+                                    border-color: #d9d9d9;
+                                    color: #1A27C9;padding: 10px;
+                                    float:right;
+                                    justify-content: center;
+                                    align-items: center; 
+                                    position:relative;
+                                    padding: 12px 36px;
+                                    margin-top:10px;
+                                     "
+                                    class="bottom-btn show-only-pc">
+                                        <span style="font-size: 18px">View all projects</span>
+                                        <img alt="" class="ml-2" src="{% static 'images/media/home-view-all-arrow.png' %}" style="color:#1A27C9">
+                                </center>
+                            </a>
+                        </div>
                             <!-- </section> -->
                     
                         </div>
@@ -237,51 +254,6 @@
                             }
                         }
                     </style>
-
-                <div class="work-carousel-btn">
-                    
-                    <!-- <div class="owl-dots carousel-btn-dots" style="margin-top: 50px;">
-                        <button role="button" class="owl-dot active"><span></span></button>
-                        <button role="button" class="owl-dot"><span></span></button>
-                        <button role="button" class="owl-dot"><span></span></button>
-                        <button role="button" class="owl-dot"><span></span></button>
-                    </div> -->
-                    
-
-
-                    <!-- <a href="./"><center class="mb-5 mt-5" 
-                            style="
-                            background-color: #F3F3FF;
-                            border-color: #d9d9d9;
-                            color: #1A27C9;
-                            padding: 10px;
-                            float:right;
-                            padding: 12px 36px;
-                            margin-top:12px;
-                            justify-content: center;
-                            align-items: center;        
-                    ">
-              <span style="font-size: 18px">View all projects</span>
-              <img src="{% static 'images/media/home-view-all-arrow.png' %}" style="color:#1A27C9" class="ml-2" alt="" />
-                    </center> -->
-                    <a href="./">
-                        <center id="testimonial-btn" style="background-color: #F3F3FF;
-                            border-color: #d9d9d9;
-                            color: #1A27C9;padding: 10px;
-                            float:right;
-                            justify-content: center;
-                            align-items: center; 
-                            position:relative;
-                            padding: 12px 36px;
-                            margin-top:10px;
-                             "
-                            class="bottom-btn show-only-pc">
-                                <span style="font-size: 18px">View all projects</span>
-                                <img alt="" class="ml-2" src="{% static 'images/media/home-view-all-arrow.png' %}" style="color:#1A27C9">
-                        </center>
-                    </a>
-                </a>
-            </div>
                 
         
         </div>
